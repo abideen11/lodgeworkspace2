@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default class Header extends React.Component {
     render() {
@@ -11,10 +11,20 @@ export default class Header extends React.Component {
                     <div className="hdr-div">
                         <span className="hd-sp">Insert Here</span>
                     </div>
+                    <div className="hdr-div3">
+                        <span className="hd3-sp">Book Rental</span>
+                    </div>
+                    <div className="hdr-div4">
+                        <span className="hd4-sp">Write A Review</span>
+                    </div>
+                    <div className="div-src">
+                        <input className="inp-src" type="text" placeholder="Search" />
+                        <span className="img-src"><FontAwesomeIcon icon={faSearch} /></span>
+                    </div>
                     <div className="hdr-div2">
                         <span className="hd2-sp">Account <FontAwesomeIcon icon={faUserCircle} /></span>
-                        <div className="hdr-div3">
-                            <ul className="hd3-ul">
+                        <div className="hd2-div">
+                            <ul className="hd2-ul">
                                 <li>Log In</li>
                                 <li>Register</li>
                             </ul>

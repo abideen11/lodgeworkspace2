@@ -8,13 +8,13 @@ export default class Header extends React.Component {
             <div className="div-hdr">
                 <div className="hdr-col"></div>
                 <div className="hdr-col2">
-                    <div className="hdr-div">
+                    <div title="Flathopper" className="hdr-div">
                         <span className="hd-sp">Insert Here</span>
                     </div>
-                    <div className="hdr-div3">
+                    <div title="Book Rental" className="hdr-div3">
                         <span className="hd3-sp">Book Rental</span>
                     </div>
-                    <div className="hdr-div4">
+                    <div title="Write A Review" className="hdr-div4">
                         <span className="hd4-sp">Write A Review</span>
                     </div>
                     <div className="div-src">

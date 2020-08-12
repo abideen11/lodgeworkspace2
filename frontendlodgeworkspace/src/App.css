@@ -47,6 +47,9 @@
   float: left;
   margin-left: 50px;
 }
+.hdr-div3:hover, .hdr-div4:hover {
+  color: white;
+}
 /* .hdr-div3 {
   float: left;
   margin-left: 50px;
@@ -106,4 +109,111 @@ ul.hd2-ul {
 }
 .hd2-ul li:hover {
   background-color: palegreen;
+}
+
+.div-hfs, .div-hsc {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+/* .hfs-div {
+  background-color: teal;
+} */
+/* .hfs-div2 h1 {
+  margin-top: 0;
+} */
+.hfs-div2 {
+  height: 750px;
+  background-color: burlywood;
+}
+.hf2-div {
+  /* text-align: center; */
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  height: 500px;
+  background-color: yellow;
+}
+.hf2-dv {
+  background-color: red;
+}
+.hf2-dv3 {
+  background-color: blue;
+}
+.hf2-dv2 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* width: auto; */
+}
+/* .hf2d-dv, .hf2d-dv2, .hf2d-dv3, .hf2d-dv4 {
+  width: 25%;
+} */
+/* .hf2d-dv {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+} */
+.hf2d-dv {
+  background-image: url('https://media.bizj.us/view/img/7865962/universal-1*1200xx6000-3381-0-366.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/* .hf2d-dv img {
+  flex: 1;
+  height: 100%;
+} */
+/* .hf2d-dv img {
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+} */
+.hf2d-dv2 {
+  background-image: url('https://wdwnt-buzzy.s3.amazonaws.com/2020/02/Cinderella-castle-hero.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.hf2d-dv3 {
+  background-image: url('https://cdn.hotelplanner.com/Common/Images/HotelImage/276656.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.hf2d-dv4 {
+  background-image: url('https://www.tropicaltravelgirl.com/wp-content/uploads/2017/08/GracelandMansionScreen_WEB.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.hfs-div2 span {
+  /* float: right;  */
+  overflow: auto;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  border-radius: 30px;
+  /* padding: 10px 2px; */
+  padding-top: 7.5px;
+  /* padding-bottom: 5px; */
+  background-color: tomato;
+  /* margin: 10px 0 70px 0; */
+  /* margin-right: 10px; */
+  /* margin-bottom: 10px; */
+  top: 710px;
+  right: 200px;
+  /* bottom: 10px; */
+}
+.hsc-div2 {
+  background-color: cornflowerblue;
+}
+.hsc-div2 h1, .hsc-div2 p {
+  margin-left: 30px;
+  padding: 20px;
 }

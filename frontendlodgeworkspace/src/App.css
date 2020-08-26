@@ -100,6 +100,10 @@
   display: none;
   position: absolute;
   background-color: white;
+  /* text-align: center; */
+  /* top: 5px; */
+  /* bottom: 5px; */
+  /* padding: 10px; */
   /* min-width: 50px; */
 }
 ul.hd2-ul {
@@ -255,7 +259,8 @@ ul.hd2-ul {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: white;
+  color: purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,7 +272,8 @@ ul.hd2-ul {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: white;
+  color: purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -278,3 +284,48 @@ ul.hd2-ul {
   /* text-align: center; */
 }
 /* -- --  */
+
+/* -- Rental Container -- */
+/* .rct-div {
+  background-image: url('https://www.visitnj.org/sites/default/files/MilesScenicKMP_Delaware-Water-Gap_645x415.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+} */
+.rct-div {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.rct-div img {
+  /* width: fit-content; */
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  /* left: 0; */
+  /* top: 0; */
+}
+.rct-div h1 {
+  z-index: 100;
+  position: absolute;
+  left: 550px;
+  top: 100px;
+}
+.rct-div2 {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.rct-dv {
+  background-color: red;
+}
+.rct-dv2 h1 {
+  text-align: center;
+  margin-top: 0;
+}
+.rct-dv2 h2 {
+  text-align: center;
+} 
+.rct-dv3 {
+  background-color: blue;
+}
+/* -- -- */

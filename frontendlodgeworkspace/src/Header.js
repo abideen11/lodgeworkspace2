@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 export default class Header extends React.Component {
     render() {
@@ -9,10 +10,10 @@ export default class Header extends React.Component {
                 <div className="hdr-col"></div>
                 <div className="hdr-col2">
                     <div title="Flathopper" className="hdr-div">
-                        <span className="hd-sp">Insert Here</span>
+                        <span className="hd-sp"><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Insert Here</Link></span>
                     </div>
                     <div title="Book Rental" className="hdr-div3">
-                        <span className="hd3-sp">Book Rental</span>
+                        <span className="hd3-sp"><Link to="/rentals" style={{ color: 'inherit', textDecoration: 'none' }}>Book Rental</Link></span>
                     </div>
                     <div title="Write A Review" className="hdr-div4">
                         <span className="hd4-sp">Write A Review</span>

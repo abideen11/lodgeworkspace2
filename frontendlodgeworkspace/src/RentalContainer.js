@@ -21,10 +21,18 @@ export default class RentalContainer extends React.Component {
                         {/* <br /> */}
                         <h2>Check Out Some Listings</h2>
                         <br />
-                        <hr />
-                        <div>
-                            {this.props.hosts.map(host => <RentalCard host={host} />)}
+                        {/* <hr /> */}
+                        <div className="rcd2-dv">
+                            <div className="rcd2-div"></div>
+                            <div className="rcd2-div2">
+                                <hr />
+                                {this.props.hosts.map(host => <RentalCard host={host} />)}
+                            </div>
                         </div>
+                        {/* <div></div> */}
+                        {/* <div>
+                            {this.props.hosts.map(host => <RentalCard host={host} />)}
+                        </div> */}
                     </div>
                     <div className="rct-dv3"></div>
                 </div>

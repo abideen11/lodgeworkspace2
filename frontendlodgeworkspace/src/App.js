@@ -8,6 +8,8 @@ import Header from './Header';
 import Footer from './Footer';
 import Rentals from './RentalContainer';
 import RentalContainer from './RentalContainer';
+import Error from './Error';
+import LogIn from './LogIn';
 
 // function App() {
 //   return (
@@ -52,6 +54,8 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} />} />
+            <Route path="/login" component={LogIn} />
+            <Route path="*" component={Error} />
           </Switch>
           <Route component={Footer} /> 
         </div>

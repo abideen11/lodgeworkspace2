@@ -34,7 +34,8 @@ import LogIn from './LogIn';
 
 class App extends React.Component {
   state = {
-    hosts: []
+    hosts: [],
+    clickedRental: null
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -45,6 +46,11 @@ class App extends React.Component {
       })
     })
   }
+  onClickedRental = () => {
+    this.setState({
+      clickedRental: null
+    })
+  }
   render() {
     console.log(this.state.hosts)
     return(
@@ -53,7 +59,7 @@ class App extends React.Component {
           <Route component={Header} />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} />} />
+            <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
             <Route path="/login" component={LogIn} />
             <Route path="*" component={Error} />
           </Switch>

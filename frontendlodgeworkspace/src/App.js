@@ -10,6 +10,12 @@ import Rentals from './RentalContainer';
 import RentalContainer from './RentalContainer';
 import Error from './Error';
 import LogIn from './LogIn';
+import RentalForm from './RentalForm';
+import Rentalrockymount from './Rentalrockymount';
+import Rentalocala from './Rentalocala';
+import Rentalmountpleasant from './Rentalmountpleasant';
+import Rentalcrawford from './Rentalcrawford';
+import Rentalgreencove from './Rentalgreencove';
 
 // function App() {
 //   return (
@@ -46,9 +52,9 @@ class App extends React.Component {
       })
     })
   }
-  onClickedRental = () => {
+  onClickedRental = (rental) => {
     this.setState({
-      clickedRental: null
+      clickedRental: rental
     })
   }
   render() {
@@ -60,6 +66,12 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
+            <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} />} />
+            <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } />
+            <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } />
+            <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} />} />
+            <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} />} />
+            {/* <Route path="/rentalform" render={() => <RentalForm clickedRental={this.state.clickedRental} />} /> */}
             <Route path="/login" component={LogIn} />
             <Route path="*" component={Error} />
           </Switch>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class HomeFirst extends React.Component {
     render() {
@@ -27,7 +28,7 @@ export default class HomeFirst extends React.Component {
                         </div>
                         <div className="hf2-dv3"></div>
                     </div>
-                    <span>See All Options</span>
+                    <span><Link to="/rentals" style={{ color: 'inherit', textDecoration: 'none' }}>See All Options</Link></span>
                 </div>
                 <div className="hfs-div3"></div>
             </div>

@@ -310,6 +310,8 @@ ul.hd2-ul {
   position: absolute;
   left: 550px;
   top: 100px;
+  /* display: block; */
+  /* margin: 0 auto; */
 }
 .rct-div2 {
   display: grid;
@@ -375,7 +377,7 @@ ul.hd2-ul {
   padding: 10px;
 }
 .dv2-rfm {
-  background-color: saddlebrown;
+  background-color: palegoldenrod;
   padding: 10px;
 }
 .dv2-rfm2 {
@@ -419,6 +421,76 @@ ul.hd2-ul {
 /* .rdv2-dv {} */
 /* -- --  */
 /* -- Rental Card --  */
+.rdv2-div3 {
+  margin: 0 auto;
+  padding: 40px;
+}
+.rdv2-div4 {
+  display: flex;
+  justify-content: center;
+}
+.rdv2-div5 {
+  position: relative;
+  font-size: 120%;
+  /* margin-left: 40px; */
+  margin-bottom: 80px;
+}
+.rdv2-div5p1 {
+  position: absolute;
+  /* margin: 10px; */
+  left: 40px;
+}
+.rdv2-div5p2 {
+  position: absolute;
+  right: 40px;
+}
+.rdv2-div5p3 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.rdv2-div5p4 {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.rdv2-div5p5 {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+}
+.rdv2-div6 {
+  display: flex;
+  justify-content: center;
+}
+.rdv2-div7 {
+  position: relative;
+  margin-bottom: 80px;
+}
+.rdv2-div7p1 {
+  position: absolute;
+  left: 40px;
+}
+.rdv2-div7d1 {
+  position: absolute;
+  top: 18px;
+  left: 300px;
+}
+/* .rdv2-div7f1 {
+  position: absolute;
+  top: 20px;
+  left: 360px;
+} */
+.rdv2-div7p2 {
+  position: absolute;
+  top: 38px;
+  left: 40px;
+}
+.rdv2-div7d2 {
+  position: absolute;
+  top: 54px;
+  left: 300px;
+}
 .rcd-dv {
   position: relative;
 }

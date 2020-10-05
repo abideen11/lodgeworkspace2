@@ -433,7 +433,8 @@ ul.hd2-ul {
   position: relative;
   font-size: 120%;
   /* margin-left: 40px; */
-  margin-bottom: 80px;
+  margin-bottom: 90px;
+  /* padding-bottom: 50px; */
 }
 .rdv2-div5p1 {
   position: absolute;
@@ -490,6 +491,88 @@ ul.hd2-ul {
   position: absolute;
   top: 54px;
   left: 300px;
+}
+.rdv2-div7s1 {
+  position: absolute;
+  top: 88px;
+  left: 400px;
+  background-color: purple;
+  color: white;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+}
+/* .rdv2-div7d3 {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+} */
+.rdv2-div8 {
+  position: relative;
+  margin-bottom: 280px;
+  /* margin-left: 40px; */
+}
+.rdv2-div8d1 {
+  position: absolute;
+  left: 40px;
+}
+.rdv2-div8 p {
+  margin-bottom: 0;
+}
+/* .rdv2-div8d1 hr {
+  width: 80%;
+} */
+.rdv2-div8p1 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.rdv2-div8p2 {
+  position: absolute;
+  top: 40px;
+  left: 360px;
+} 
+.rdv2-div8p3 {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+.rdv2-div8p4 {
+  position: absolute;
+  top: 60px;
+  left: 360px;
+}
+.rdv2-div8p5 {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+.rdv2-div8p6 {
+  position: absolute;
+  top: 100px;
+  left: 360px;
+}
+.rdv2-div8s1 {
+  position: absolute;
+  top: 150px;
+  left: 360px;
+  background-color: purple;
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 .rcd-dv {
   position: relative;

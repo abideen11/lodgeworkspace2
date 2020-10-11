@@ -16,6 +16,7 @@ import Rentalocala from './Rentalocala';
 import Rentalmountpleasant from './Rentalmountpleasant';
 import Rentalcrawford from './Rentalcrawford';
 import Rentalgreencove from './Rentalgreencove';
+import RentalReceipt from './RentalReceipt';
 
 // function App() {
 //   return (
@@ -41,7 +42,8 @@ import Rentalgreencove from './Rentalgreencove';
 class App extends React.Component {
   state = {
     hosts: [],
-    clickedRental: null
+    clickedRental: null,
+    reservedRental: null
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -57,6 +59,11 @@ class App extends React.Component {
       clickedRental: rental
     })
   }
+  onReservedRental = (rental) => {
+    this.setState({
+      reservedRental: rental
+    })
+  }
   render() {
     console.log(this.state.hosts)
     return(
@@ -66,11 +73,12 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
-            <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} />} />
+            <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} />} />
             <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } />
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } />
             <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} />} />
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} />} />
+            <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
             {/* <Route path="/rentalform" render={() => <RentalForm clickedRental={this.state.clickedRental} />} /> */}
             <Route path="/login" component={LogIn} />
             <Route path="*" component={Error} />

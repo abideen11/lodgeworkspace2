@@ -5,6 +5,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import DatePicker from 'react-datepicker'
 
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from 'react-router-dom';
 
 export default class Rentalrockymount extends React.Component {
     state = {
@@ -17,7 +18,21 @@ export default class Rentalrockymount extends React.Component {
         lodgingFee: 0,
         serviceFee: 0,
         total: 0,
-        bookedLodging: false
+        bookedLodging: false,
+        bookedRental: {
+            name: this.props.clickedRental.name,
+            age: this.props.clickedRental.age,
+            location: this.props.clickedRental.location,
+            rental: this.props.clickedRental.rental,
+            max_days: this.props.clickedRental.max_days,
+            price: this.props.clickedRental.price,
+            begin_Date: null,
+            end_Date: null,
+            days: null,
+            lodging_Fee: null,
+            service_Fee: null,
+            total_ : null
+        }
     }
     showRentalImg1 = () => {this.setState({rentalImg1: true})}
     notShowRentalImg1 = () => {this.setState({rentalImg1: false})}
@@ -40,6 +55,19 @@ export default class Rentalrockymount extends React.Component {
             total: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10
         })
     )
+    onBookedRental = () => {
+        this.setState(i => ({
+            bookedRental: {
+                ...i.bookedRental,
+                begin_Date: this.state.beginDate,
+                end_Date: this.state.endDate,
+                days: (this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24),
+                lodging_Fee: ((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price,
+                service_Fee: Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
+                total_: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10
+            }
+        }))
+    }
     isDateVaild = () => {
         if(this.state.currentDate.getTime() > this.state.beginDate.getTime()) {
             alert("Please choose a valid check-in date.")
@@ -49,23 +77,25 @@ export default class Rentalrockymount extends React.Component {
         }
         if(this.state.beginDate.getTime() > this.state.currentDate.getTime() && this.state.endDate.getTime() > this.state.beginDate.getTime()) {
             if(((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) {
-                alert("Valid dates")
+                // alert("Valid dates")
                 this.onFees()
+                this.onBookedRental()
                 // this.setState({bookedLodging: true})
             }
             else {
-                alert("please enter dates equal or below max days")
+                alert("please choose dates where the days between are equal or below the max days")
             }
         }
     }
-    onBookedLodging = () => {
-        if(this.state.lodgingFee > 0) {
-            this.setState({bookedLodging: true})
-        }
-        else {
-            alert("Please select dates")
-        }
-    }
+    // onBookedLodging = () => {
+    //     if(this.state.lodgingFee > 0) {
+    //         this.setState({bookedLodging: true})
+    //     }
+    //     else {
+    //         alert("Please select dates")
+    //     }
+    // }
+    // onBookedRental = () => {}
     render() {
         // console.log(this.props.clickedRental)
         console.log((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))
@@ -75,7 +105,7 @@ export default class Rentalrockymount extends React.Component {
         console.log(this.state.beginTime,"begin")
         // console.log(this.state.changedDate)
         return(
-            this.state.bookedLodging ? <p>Thank you</p> :
+            // this.state.bookedLodging ? <p>Thank you</p> :
             <div className="div-rfm">
                 <div className="rfm-div"></div>
                 <div className="rfm-div2">
@@ -139,9 +169,16 @@ export default class Rentalrockymount extends React.Component {
                         <p className="rdv2-div8p4">{this.state.serviceFee}</p>
                         <p className="rdv2-div8p5">Total:</p>
                         <p className="rdv2-div8p6">{this.state.total}</p>
-                        <span className="rdv2-div8s1" onClick={this.onBookedLodging}>Accept</span>
+                        {/* <span className="rdv2-div8s1" onClick={this.onBookedLodging}>Accept</span> */}
+                        {
+                            this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) ?
+                            <div className="rdv2-div8s1" onClick={() => this.props.onReservedRental(this.state.bookedRental)}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div>
+                            :
+                            <div className="rdv2-div8s1alt" disabled>Accept</div>
+                        }
+                        {/* <button className="rdv2-div8s1" onClick={this.onBookedLodging}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></button> */}
                     </div>
-                    <p>{this.props.clickedRental.rental}</p>
+                    {/* <p>{this.props.clickedRental.rental}</p> */}
                 </div>
                 <div className="rfm-div3"></div>
             </div>

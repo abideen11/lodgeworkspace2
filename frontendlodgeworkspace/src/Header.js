@@ -16,7 +16,7 @@ export default class Header extends React.Component {
                         <span className="hd3-sp"><Link to="/rentals" style={{ color: 'inherit', textDecoration: 'none' }}>Book Rental</Link></span>
                     </div>
                     <div title="Write A Review" className="hdr-div4">
-                        <span className="hd4-sp">Write A Review</span>
+                        <span className="hd4-sp"><Link to="/writereview" style={{ color: 'inherit', textDecoration: 'none' }}>Write A Review</Link></span>
                     </div>
                     <div className="div-src">
                         <input className="inp-src" type="text" placeholder="Search" />

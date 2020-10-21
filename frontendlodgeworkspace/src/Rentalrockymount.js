@@ -26,12 +26,15 @@ export default class Rentalrockymount extends React.Component {
             rental: this.props.clickedRental.rental,
             max_days: this.props.clickedRental.max_days,
             price: this.props.clickedRental.price,
+            rental_Img1: this.props.clickedRental.rental_img1,
+            rental_Img2: this.props.clickedRental.rental_img2,
             begin_Date: null,
             end_Date: null,
             days: null,
             lodging_Fee: null,
             service_Fee: null,
-            total_ : null
+            total_: null,
+            receiptNumber: null
         }
     }
     showRentalImg1 = () => {this.setState({rentalImg1: true})}
@@ -64,7 +67,8 @@ export default class Rentalrockymount extends React.Component {
                 days: (this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24),
                 lodging_Fee: ((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price,
                 service_Fee: Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
-                total_: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10
+                total_: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
+                receiptNumber: Math.floor(Math.random() * 999999) + 100000
             }
         }))
     }
@@ -87,6 +91,9 @@ export default class Rentalrockymount extends React.Component {
             }
         }
     }
+    addRental = () => {
+        this.props.allRentals.push(this.state.bookedRental)
+    }
     // onBookedLodging = () => {
     //     if(this.state.lodgingFee > 0) {
     //         this.setState({bookedLodging: true})
@@ -98,11 +105,12 @@ export default class Rentalrockymount extends React.Component {
     // onBookedRental = () => {}
     render() {
         // console.log(this.props.clickedRental)
+        console.log(this.props.onAllRentals)
         console.log((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))
-        console.log(this.state.beginDate)
-        console.log(this.state.endDate)
-        console.log(this.state.currentTime,"current")
-        console.log(this.state.beginTime,"begin")
+        // console.log(this.state.beginDate)
+        // console.log(this.state.endDate)
+        // console.log(this.state.currentTime,"current")
+        // console.log(this.state.beginTime,"begin")
         // console.log(this.state.changedDate)
         return(
             // this.state.bookedLodging ? <p>Thank you</p> :
@@ -172,7 +180,7 @@ export default class Rentalrockymount extends React.Component {
                         {/* <span className="rdv2-div8s1" onClick={this.onBookedLodging}>Accept</span> */}
                         {
                             this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) ?
-                            <div className="rdv2-div8s1" onClick={() => this.props.onReservedRental(this.state.bookedRental)}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div>
+                            <div className="rdv2-div8s1" onClick={() => {this.props.onReservedRental(this.state.bookedRental) ; this.addRental() }}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div>
                             :
                             <div className="rdv2-div8s1alt" disabled>Accept</div>
                         }

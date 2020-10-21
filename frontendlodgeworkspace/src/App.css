@@ -676,7 +676,79 @@ ul.hd2-ul {
   text-align: left;
   margin-bottom: 0;
 }
+.rrd2-d1 {
+  margin-top: 80px;
+}
+.rrd2-d1 hr {
+  /* background-color: black; */
+  color: black;
+  /* width: 80%; */
+}
+.rrd2-p10 {
+  text-align: right;
+}
+.rrd2-h2 {
+  text-align: center;
+}
 /* -- -- */
+/* -- Rental Review --  */
+.div-rrv {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.rrv-div {
+  background-color: orange;
+}
+.rrv-div3 {
+  background-color: palegoldenrod;
+}
+.rrv-div2 h1 {
+  text-align: center;
+}
+.rrv-d2d {
+  /* margin: 0 auto; */
+  text-align: center;
+  /* width: 700px; */
+  /* height: 200px; */
+  /* background-color: blue; */
+}
+.div-rrvc {
+  margin: auto;
+  position: relative;
+  width: 700px;
+  height: 200px;
+  background-color: blue;
+}
+.rrvc-p {
+  position: absolute;
+  /* top: 0; */
+  left: 300px;
+}
+.rrvc-i {
+  /* text-align: left; */
+  position: absolute;
+  top: 50px;
+  left: 0;
+  /* margin-left: 0; */
+  width: 100px;
+  height: 100px;
+}
+.rrvc-p2 {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+.rrvc-p3 {
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+.rrvc-p4 {
+  position: absolute;
+  top: 90px;
+  right: 0;
+}
+/* -- --  */
 
 /* -- Log In --  */
 .log-div {

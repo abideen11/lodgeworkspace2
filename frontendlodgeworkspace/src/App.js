@@ -17,6 +17,7 @@ import Rentalmountpleasant from './Rentalmountpleasant';
 import Rentalcrawford from './Rentalcrawford';
 import Rentalgreencove from './Rentalgreencove';
 import RentalReceipt from './RentalReceipt';
+import RentalReview from './RentalReview';
 
 // function App() {
 //   return (
@@ -43,7 +44,8 @@ class App extends React.Component {
   state = {
     hosts: [],
     clickedRental: null,
-    reservedRental: null
+    reservedRental: null,
+    allRentals: []
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -64,8 +66,14 @@ class App extends React.Component {
       reservedRental: rental
     })
   }
+  // onAllRentals = (rental) => {
+  //   this.setState({
+  //     allRentals: this.state.allRentals.push(rental)
+  //   })
+  // }
   render() {
     console.log(this.state.hosts)
+    console.log(this.state.allRentals)
     return(
       <BrowserRouter>
         <div>
@@ -73,12 +81,13 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
-            <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} />} />
+            <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } />
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } />
             <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} />} />
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} />} />
             <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
+            <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} />} />
             {/* <Route path="/rentalform" render={() => <RentalForm clickedRental={this.state.clickedRental} />} /> */}
             <Route path="/login" component={LogIn} />
             <Route path="*" component={Error} />

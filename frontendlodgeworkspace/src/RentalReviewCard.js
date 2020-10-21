@@ -1,0 +1,18 @@
+import React from 'react';
+
+export default class RentalReviewCard extends React.Component {
+    state = {
+        options: { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+    }
+    render() {
+        return(
+            <div className="div-rrvc">
+                <p className="rrvc-p"><b>Receipt #: {this.props.rent.receiptNumber}</b></p>
+                <img className="rrvc-i" src={this.props.rent.rental_Img1} alt="plc" />
+                <p className="rrvc-p2">From: {this.props.rent.begin_Date.toLocaleDateString('en-US', this.state.options)}</p>
+                <p className="rrvc-p3">To: {this.props.rent.end_Date.toLocaleDateString('en-US', this.state.options)}</p>
+                <p className="rrvc-p4">Amount Paid: {this.props.rent.total_}</p>
+            </div>
+        )
+    }
+}

@@ -29,6 +29,7 @@ export default class HomeFirst extends React.Component {
                         <div className="hf2-dv3"></div>
                     </div>
                     <span><Link to="/rentals" style={{ color: 'inherit', textDecoration: 'none' }}>See All Options</Link></span>
+                    {/* <div>See All Options</div> */}
                 </div>
                 <div className="hfs-div3"></div>
             </div>

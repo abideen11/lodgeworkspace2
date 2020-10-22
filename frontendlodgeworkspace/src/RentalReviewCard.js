@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class RentalReviewCard extends React.Component {
     state = {
@@ -12,6 +13,7 @@ export default class RentalReviewCard extends React.Component {
                 <p className="rrvc-p2">From: {this.props.rent.begin_Date.toLocaleDateString('en-US', this.state.options)}</p>
                 <p className="rrvc-p3">To: {this.props.rent.end_Date.toLocaleDateString('en-US', this.state.options)}</p>
                 <p className="rrvc-p4">Amount Paid: {this.props.rent.total_}</p>
+                <div className="rrvc-d" onClick={() => this.props.onReviewRental(this.props.rent)}><Link to="/rentalreview" style={{ color: 'inherit', textDecoration: 'none' }}>Review</Link></div>
             </div>
         )
     }

@@ -18,6 +18,7 @@ import Rentalcrawford from './Rentalcrawford';
 import Rentalgreencove from './Rentalgreencove';
 import RentalReceipt from './RentalReceipt';
 import RentalReview from './RentalReview';
+import RentalReviewForm from './RentalReviewForm';
 
 // function App() {
 //   return (
@@ -45,7 +46,8 @@ class App extends React.Component {
     hosts: [],
     clickedRental: null,
     reservedRental: null,
-    allRentals: []
+    allRentals: [],
+    reviewRental: null
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -66,6 +68,7 @@ class App extends React.Component {
       reservedRental: rental
     })
   }
+  onReviewRental = (rental) => {this.setState({reviewRental: rental})}
   // onAllRentals = (rental) => {
   //   this.setState({
   //     allRentals: this.state.allRentals.push(rental)
@@ -87,7 +90,8 @@ class App extends React.Component {
             <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} />} />
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} />} />
             <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
-            <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} />} />
+            <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} onReviewRental={this.onReviewRental} />} />
+            <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} />} />
             {/* <Route path="/rentalform" render={() => <RentalForm clickedRental={this.state.clickedRental} />} /> */}
             <Route path="/login" component={LogIn} />
             <Route path="*" component={Error} />

@@ -214,6 +214,20 @@ ul.hd2-ul {
   right: 200px;
   /* bottom: 10px; */
 }
+/* .hfs-div2 div {
+  position: absolute;
+  background-color: yellowgreen;
+  color: white;
+  width: 150px;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 710px;
+  right: 210px;
+  padding-top: 7.5px;
+} */
 .hsc-div2 {
   background-color: cornflowerblue;
 }
@@ -463,6 +477,7 @@ ul.hd2-ul {
 .rdv2-div6 {
   display: flex;
   justify-content: center;
+  /* align-items: center; */
 }
 .rdv2-div7 {
   position: relative;
@@ -573,6 +588,7 @@ ul.hd2-ul {
   border-radius: 5px;
   display: flex;
   justify-content: center;
+  /* align-items: center; */
 }
 .rdv2-div8s1alt {
   position: absolute;
@@ -747,6 +763,63 @@ ul.hd2-ul {
   position: absolute;
   top: 90px;
   right: 0;
+}
+.rrvc-d {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  color: white;
+}
+/* -- --  */
+/* -- Rental Review Form --  */
+.div-rrvf {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.rrvf-div {
+  background-color: brown;
+}
+.rrvf-div3 {
+  background-color: grey;
+}
+.rvf-div {
+  /* text-align: center; */
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+/* future img  */
+/* .rvf-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+} */
+/* --  */
+.rvf-h, .rvf-p, .rvf-h2, .rvf-p2, .rvf-p3, .rvf-p4 {
+  text-align: center;
+}
+.rvf-div2 {
+  /* display: block; */
+  /* margin: 0 auto; */
+  margin-left: 440px;
+}
+.rvf-txt {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 300px;
+  margin-bottom: 20px;
 }
 /* -- --  */
 

@@ -12,7 +12,7 @@ export default class RentalReview extends React.Component {
                     {/* <div className="rrv-dv2"></div> */}
                     <h1>This Is Rental Review Page</h1>
                     <div className="rrv-d2d">
-                        {this.props.allRentals.map(rent => <RentalReviewCard rent={rent} />)}
+                        {this.props.allRentals.map(rent => <RentalReviewCard rent={rent} onReviewRental={this.props.onReviewRental} />)}
                         <br />
                     </div>
                 </div>

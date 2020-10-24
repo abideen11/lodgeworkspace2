@@ -19,6 +19,9 @@ import Rentalgreencove from './Rentalgreencove';
 import RentalReceipt from './RentalReceipt';
 import RentalReview from './RentalReview';
 import RentalReviewForm from './RentalReviewForm';
+import RentalReviewPrompt from './RentalReviewPrompt';
+import Temporary from './Temporary';
+import Search from './Search';
 
 // function App() {
 //   return (
@@ -47,7 +50,8 @@ class App extends React.Component {
     clickedRental: null,
     reservedRental: null,
     allRentals: [],
-    reviewRental: null
+    reviewRental: null,
+    searchData: []
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -69,6 +73,17 @@ class App extends React.Component {
     })
   }
   onReviewRental = (rental) => {this.setState({reviewRental: rental})}
+  onSearch = (e) => {
+    this.state.hosts.map(
+      i => {
+        if(i.location.toLowerCase().includes(e.toLowerCase()) || i.rental.toLowerCase().includes(e.toLowerCase())) {
+          this.setState({
+            searchData: this.state.hosts.filter(i => i.location.toLowerCase().includes(e.toLowerCase()) || i.rental.toLowerCase().includes(e.toLowerCase()))
+          })
+        }
+      }
+    )
+  }
   // onAllRentals = (rental) => {
   //   this.setState({
   //     allRentals: this.state.allRentals.push(rental)
@@ -80,7 +95,7 @@ class App extends React.Component {
     return(
       <BrowserRouter>
         <div>
-          <Route component={Header} />
+          <Route render={() => <Header onSearch={this.onSearch}  />} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
@@ -92,8 +107,11 @@ class App extends React.Component {
             <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
             <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} onReviewRental={this.onReviewRental} />} />
             <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} />} />
+            <Route path="/rentalreviewprompt" component={RentalReviewPrompt} />
+            <Route path="/search" render={() => <Search searchData={this.state.searchData} />} />
             {/* <Route path="/rentalform" render={() => <RentalForm clickedRental={this.state.clickedRental} />} /> */}
             <Route path="/login" component={LogIn} />
+            <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />
           </Switch>
           <Route component={Footer} /> 

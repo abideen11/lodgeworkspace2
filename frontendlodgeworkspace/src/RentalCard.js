@@ -1,3 +1,5 @@
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +32,7 @@ export default class RentalCard extends React.Component {
                             : 
                             <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/greencovesprings" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                         }
+                        <div className="rcd-sdv6"><FontAwesomeIcon icon={faHeart} /></div>
                         {/* <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/rentalform" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div> */}
                         {/* <span className="rcd-sdv5">Try</span> */}
                     </div>

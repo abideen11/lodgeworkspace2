@@ -43,11 +43,11 @@
   display: grid;
   grid-template-columns: -1fr 11fr -1fr;
 }
-.hdr-div, .hdr-div3, .hdr-div4 {
+.hdr-div, .hdr-div3, .hdr-div4, .hdr-div5 {
   float: left;
   margin-left: 50px;
 }
-.hdr-div3:hover, .hdr-div4:hover {
+.hdr-div3:hover, .hdr-div4:hover, .hdr-div5:hover {
   color: white;
 }
 /* .hdr-div3 {
@@ -74,7 +74,7 @@
   position: relative;
   float: left;
   margin-top: -5px;
-  margin-left: 400px;
+  margin-left: 250px;
   width: 330px;
   height: 100%;
 }
@@ -634,12 +634,12 @@ ul.hd2-ul {
 .rcd-sdv4 {
   position: absolute;
   margin-left: 600px;
-  margin-top: -40px;
+  margin-top: -120px;
 }
 .rcd-sdv5 {
   position: absolute;
   margin-left: 600px;
-  margin-top: -100px;
+  margin-top: -35px;
   width: 90px;
   height: 35px;
   border-radius: 5px;
@@ -649,6 +649,11 @@ ul.hd2-ul {
   /* padding: 10px; */
   background-color: purple;
   color: white;
+}
+.rcd-sdv6 {
+  position: absolute;
+  margin-left: 720px;
+  margin-top: -106px;
 }
 /* -- --  */
 
@@ -662,6 +667,16 @@ ul.hd2-ul {
 }
 .rre-div3 {
   background-color: orangered;
+}
+.rre-div2p {
+  /* margin-top: 5px; */
+  /* margin-right: 10px; */
+  /* top: 5px; */
+  /* right: 5px; */
+  /* padding-top: 5px; */
+  /* padding-right: 0; */
+  text-align: right;
+  padding-right: 20px;
 }
 .rre-div2h1 {
   text-align: center;
@@ -702,6 +717,9 @@ ul.hd2-ul {
 }
 .rrd2-p10 {
   text-align: right;
+}
+.rrd2-d2 hr {
+  color: black;
 }
 .rrd2-h2 {
   text-align: center;
@@ -805,8 +823,12 @@ ul.hd2-ul {
   overflow: hidden;
 } */
 /* --  */
-.rvf-h, .rvf-p, .rvf-h2, .rvf-p2, .rvf-p3, .rvf-p4 {
+.rvf-h, .rvf-h2, .rvf-p2, .rvf-p3, .rvf-p4 {
   text-align: center;
+}
+.rvf-p {
+  text-align: center;
+  padding: 10px;
 }
 .rvf-div2 {
   /* display: block; */
@@ -820,6 +842,64 @@ ul.hd2-ul {
   width: 600px;
   height: 300px;
   margin-bottom: 20px;
+  resize: vertical;
+}
+.rvf-div3 {
+  background-color: orange;
+  color: white;
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 20px
+  /* margin-right: 50px; */
+  /* text-align: right; */
+  /* padding-right: 50px; */
+}
+.rvf-div3alt {
+  background-color: grey;
+  color: white;
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 20px;
+}
+/* -- --  */
+/* -- Rental Review Prompt --  */
+.div-rrvp {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.rrvp-div {
+  background-color: cadetblue;
+}
+.rrvp-div3 {
+  background-color: crimson;
+}
+.rrvp-div2 {
+  padding: 20px;
+  width: 100%;
+  height: 330px;
+  text-align: center;
+}
+/* -- --  */
+/* -- Search --  */
+.div-srch {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.srch-div {
+  background-color: teal;
+}
+.srch-div3 {
+  background-color: brown;
 }
 /* -- --  */
 
@@ -834,7 +914,18 @@ ul.hd2-ul {
 }
 /* -- --  */
 
-
+/* -- Temporary --  */
+.div-tmp {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.tmp-div2 {
+  padding: 20px;
+  width: 100%;
+  height: 330px;
+  text-align: center;
+}
+/* -- --  */
 
 /* -- Error --  */
 .div-err {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
 export default class RentalReviewForm extends React.Component {
     state = {
@@ -39,6 +40,13 @@ export default class RentalReviewForm extends React.Component {
                     </div>
                     <p className="rvf-p4"><b>Please tell us why you gave us this rating.</b></p>
                     <textarea className="rvf-txt" value={this.state.feedback} onChange={this.onFeedback}></textarea>
+                    {/* <div className="rvf-div3" onClick={() => this.isFeedbackComplete()}>Submit</div> */}
+                    {
+                        this.state.feedback.length > 0 && this.state.rating > 0 ?
+                        <div className="rvf-div3"><Link to="/rentalreviewprompt" style={{ color: 'inherit', textDecoration: 'none' }}>Submit</Link></div>
+                        :
+                        <div className="rvf-div3alt" disabled>Submit</div>
+                    }
                 </div>
                 <div className="rrvf-div3"></div>
             </div>

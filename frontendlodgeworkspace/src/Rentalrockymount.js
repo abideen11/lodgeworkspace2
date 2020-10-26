@@ -104,6 +104,7 @@ export default class Rentalrockymount extends React.Component {
     // }
     // onBookedRental = () => {}
     render() {
+        console.log(this.props.allRentals)
         // console.log(this.props.clickedRental)
         console.log(this.props.onAllRentals)
         console.log((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))

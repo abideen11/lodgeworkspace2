@@ -1,9 +1,28 @@
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { fas, faHeart } from '@fortawesome/free-solid-svg-icons' 
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default class RentalCard extends React.Component {
+    state = {
+        isFavorite: false
+    }
+    onIsFavorite = () => {this.setState({isFavorite: !this.state.isFavorite})}
+    onFavorites = (rental) => {
+        if(this.props.favorites.length > 0) {
+            if(this.props.favorites.includes(rental)) {
+                this.setState({favorites: this.props.favorites.filter(i => i !== rental)})
+            }
+            else {
+                this.props.favorites.push(rental)
+            }
+            // this.setState({favorites: this.props.favorites.filter(i => i !== rental)})
+        }
+        else {
+            this.props.favorites.push(rental)
+        }
+    }
     render() {
         console.log(this.props.onClickedRental)
         return(
@@ -32,7 +51,14 @@ export default class RentalCard extends React.Component {
                             : 
                             <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/greencovesprings" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                         }
-                        <div className="rcd-sdv6"><FontAwesomeIcon icon={faHeart} /></div>
+                        {
+                            this.state.isFavorite === false ?
+                            <div className="rcd-sdv6" onClick={() => {this.onIsFavorite(); this.onFavorites(this.props.host)}}><FontAwesomeIcon icon={farHeart} /></div>
+                            :
+                            <div className="rcd-sdv6alt" onClick={() => {this.onIsFavorite(); this.onFavorites(this.props.host)}}><FontAwesomeIcon icon={faHeart} /></div>
+                        }
+                        {/* // <div className="rcd-sdv6"><FontAwesomeIcon icon={farHeart} /></div> */}
+                        {/* <div className="rcd-sdv6alt"><FontAwesomeIcon icon={faHeart} /></div> */}
                         {/* <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/rentalform" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div> */}
                         {/* <span className="rcd-sdv5">Try</span> */}
                     </div>

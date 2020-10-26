@@ -51,7 +51,8 @@ class App extends React.Component {
     reservedRental: null,
     allRentals: [],
     reviewRental: null,
-    searchData: []
+    searchData: [],
+    nan: []
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -84,12 +85,24 @@ class App extends React.Component {
       }
     )
   }
+  // onFavorites = (rental) => {
+  //   if(this.state.favorites.includes(rental)) {
+  //     this.setState({favorites: this.state.favorites.filter(i => i !== rental)})
+  //   }
+  //   else {
+  //     this.setState({favorites: this.state.favorites.push(rental)})
+  //   }
+  // }
   // onAllRentals = (rental) => {
   //   this.setState({
   //     allRentals: this.state.allRentals.push(rental)
   //   })
   // }
   render() {
+    // console.log(this.state.tame)
+    console.log(this.state.nan)
+    // console.log(this.state.test)
+    // console.log(this.state.favorites)
     console.log(this.state.hosts)
     console.log(this.state.allRentals)
     return(
@@ -98,7 +111,7 @@ class App extends React.Component {
           <Route render={() => <Header onSearch={this.onSearch}  />} />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
+            <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} nan={this.state.nan} />
             <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } />
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } />

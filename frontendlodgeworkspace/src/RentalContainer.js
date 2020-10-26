@@ -3,6 +3,10 @@ import RentalCard from './RentalCard';
 
 export default class RentalContainer extends React.Component {
     render() {
+        // console.log(this.props.tameRan)
+        console.log(this.props.nan)
+        // console.log(this.props.test)
+        // console.log(this.props.favorites)
         console.log(this.props.hosts)
         return(
             <div className="div-rct">
@@ -26,7 +30,7 @@ export default class RentalContainer extends React.Component {
                             <div className="rcd2-div"></div>
                             <div className="rcd2-div2">
                                 <hr />
-                                {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} />)}
+                                {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} favorites={this.props.favorites} />)}
                             </div>
                         </div>
                         {/* <div></div> */}

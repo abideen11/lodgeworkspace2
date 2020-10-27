@@ -909,6 +909,18 @@ ul.hd2-ul {
   background-color: brown;
 }
 /* -- --  */
+/* -- favorites --  */
+.div-fve {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.fve-div {
+  background-color: saddlebrown;
+}
+.fve-div3 {
+  background-color: slategrey;
+}
+/* -- --  */
 
 /* -- Log In --  */
 .log-div {

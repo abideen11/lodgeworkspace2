@@ -3,11 +3,10 @@ import RentalCard from './RentalCard';
 
 export default class RentalContainer extends React.Component {
     render() {
-        // console.log(this.props.tameRan)
-        console.log(this.props.nan)
-        // console.log(this.props.test)
+        console.log(this.props.hosts2)
+        // console.log(this.props.isFavorite)
         // console.log(this.props.favorites)
-        console.log(this.props.hosts)
+        // console.log(this.props.hosts)
         return(
             <div className="div-rct">
                 <div className="rct-div">
@@ -30,7 +29,9 @@ export default class RentalContainer extends React.Component {
                             <div className="rcd2-div"></div>
                             <div className="rcd2-div2">
                                 <hr />
-                                {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} favorites={this.props.favorites} />)}
+                                {/* {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} favorites={this.props.favorites} log={this.props.log} />)} */}
+                                {/* {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} favorites={this.props.favorites} removeFavorite={this.props.removeFavorite} isFavorite={this.props.isFavorite} onIsFavorite={this.props.onIsFavorite} />)} */}
+                                {this.props.hosts2.map(host2 => <RentalCard host2={host2} />)}
                             </div>
                         </div>
                         {/* <div></div> */}

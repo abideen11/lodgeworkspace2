@@ -22,6 +22,7 @@ import RentalReviewForm from './RentalReviewForm';
 import RentalReviewPrompt from './RentalReviewPrompt';
 import Temporary from './Temporary';
 import Search from './Search';
+import RentalFavorites from './RentalFavorites';
 
 // function App() {
 //   return (
@@ -52,14 +53,16 @@ class App extends React.Component {
     allRentals: [],
     reviewRental: null,
     searchData: [],
-    nan: []
+    favorites: [],
+    hosts2: []
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
     .then(r => r.json())
     .then(data => {
       this.setState({
-        hosts: data
+        hosts: data,
+        hosts2: data
       })
     })
   }
@@ -85,6 +88,36 @@ class App extends React.Component {
       }
     )
   }
+  removeFavorite = (rental) => {
+    this.setState({favorites: this.state.favorites.filter(i => i !== rental)})
+  }
+  onAddFavoriteOption = (array) => {
+    // array.map(j => 
+    //   this.setState(i => ({
+    //     addFavoriteOption: {
+    //       ...i.addFavoriteOption,
+    //       isFavorite: false
+    //     }
+    //   }))
+    //   )
+      for(let j = 0; j < array.length; j++) {
+        this.setState(i => ({
+          addFavoriteOption: {
+            ...i.addFavoriteOption,
+            isFavorite: false
+          }
+        }))
+      }
+  }
+  // onIsFavorite = () => {this.setState({isFavorite: !this.state.isFavorite})}
+  // onFavorites = (rental) => {
+  //   if(this.state.favorites.includes(rental)) {
+  //     this.setState({favorites: this.state.favorites.filter(i => i !== rental)})
+  //   }
+  //   else {
+  //     this.setState({favorites: this.state.favorites.push(rental)})
+  //   }
+  // }
   // onFavorites = (rental) => {
   //   if(this.state.favorites.includes(rental)) {
   //     this.setState({favorites: this.state.favorites.filter(i => i !== rental)})
@@ -99,19 +132,24 @@ class App extends React.Component {
   //   })
   // }
   render() {
-    // console.log(this.state.tame)
-    console.log(this.state.nan)
-    // console.log(this.state.test)
+    console.log(this.state.hosts2,"hosts2")
+    console.log(this.state.isFavorite)
+    console.log(this.state.favorites)
+    // console.log(this.state.log)
     // console.log(this.state.favorites)
     console.log(this.state.hosts)
     console.log(this.state.allRentals)
     return(
       <BrowserRouter>
         <div>
-          <Route render={() => <Header onSearch={this.onSearch}  />} />
+          <Route render={() => <Header onSearch={this.onSearch} hosts2={this.state.hosts2}  />} />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} nan={this.state.nan} />
+            {/* <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} nan={this.state.nan} /> */}
+            {/* <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} log={this.state.log} />} /> */}
+            <Route path="/favorites" render={() => <RentalFavorites favorites={this.state.favorites} />} />
+            {/* <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} favorites={this.state.favorites} removeFavorite={this.removeFavorite} isFavorite={this.state.isFavorite} onIsFavorite={this.onIsFavorite} />} /> */}
+            <Route path="/rentals" render={() => <RentalContainer hosts2={this.state.hosts2} />} />
             <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } />
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } />

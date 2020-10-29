@@ -9,6 +9,7 @@ class CreateHosts < ActiveRecord::Migration[6.0]
       t.integer :price
       t.string :rental_img1
       t.string :rental_img2
+      t.boolean :fave
 
       t.timestamps
     end

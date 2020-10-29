@@ -31,7 +31,8 @@ export default class RentalContainer extends React.Component {
                                 <hr />
                                 {/* {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} favorites={this.props.favorites} log={this.props.log} />)} */}
                                 {/* {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} favorites={this.props.favorites} removeFavorite={this.props.removeFavorite} isFavorite={this.props.isFavorite} onIsFavorite={this.props.onIsFavorite} />)} */}
-                                {this.props.hosts2.map(host2 => <RentalCard host2={host2} />)}
+                                {/* {this.props.hosts2.map(host2 => <RentalCard host2={host2} />)} */}
+                                {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} />)}
                             </div>
                         </div>
                         {/* <div></div> */}

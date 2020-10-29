@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_07_30_003422) do
     t.integer "price"
     t.string "rental_img1"
     t.string "rental_img2"
+    t.boolean "fave"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

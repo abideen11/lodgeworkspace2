@@ -91,24 +91,6 @@ class App extends React.Component {
   removeFavorite = (rental) => {
     this.setState({favorites: this.state.favorites.filter(i => i !== rental)})
   }
-  onAddFavoriteOption = (array) => {
-    // array.map(j => 
-    //   this.setState(i => ({
-    //     addFavoriteOption: {
-    //       ...i.addFavoriteOption,
-    //       isFavorite: false
-    //     }
-    //   }))
-    //   )
-      for(let j = 0; j < array.length; j++) {
-        this.setState(i => ({
-          addFavoriteOption: {
-            ...i.addFavoriteOption,
-            isFavorite: false
-          }
-        }))
-      }
-  }
   // onIsFavorite = () => {this.setState({isFavorite: !this.state.isFavorite})}
   // onFavorites = (rental) => {
   //   if(this.state.favorites.includes(rental)) {
@@ -149,7 +131,8 @@ class App extends React.Component {
             {/* <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} log={this.state.log} />} /> */}
             <Route path="/favorites" render={() => <RentalFavorites favorites={this.state.favorites} />} />
             {/* <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} favorites={this.state.favorites} removeFavorite={this.removeFavorite} isFavorite={this.state.isFavorite} onIsFavorite={this.onIsFavorite} />} /> */}
-            <Route path="/rentals" render={() => <RentalContainer hosts2={this.state.hosts2} />} />
+            {/* <Route path="/rentals" render={() => <RentalContainer hosts2={this.state.hosts2} />} /> */}
+            <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
             <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } />
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } />

@@ -48,7 +48,8 @@ export default class Header extends React.Component {
         )
     }
     render() {
-        console.log(this.props.hosts2)
+        console.log(this.props.onSearch)
+        // console.log(this.props.hosts2)
         return(
             <div className="div-hdr">
                 <div className="hdr-col"></div>

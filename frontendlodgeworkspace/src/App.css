@@ -908,6 +908,72 @@ ul.hd2-ul {
 .srch-div3 {
   background-color: brown;
 }
+.srch-div2 {
+  text-align: center;
+}
+/* .div-srs {
+  margin: 0 auto;
+} */
+.srs-div {
+  margin: 0 auto;
+  position: relative;
+  width: 550px;
+  height: 300px;
+  border: 1px solid black;
+  /* text-align: center; */
+}
+.srs-div img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  /* float: left; */
+  /* margin-top: 30px; */
+}
+.srs-p1 {
+  /* float: right; */
+  /* margin-top: 15px; */
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.srs-p2 {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  /* float: right; */
+  /* margin-right: -40px; */
+  /* margin-left: 230px; */
+  /* margin-top: 40px; */
+  /* text-align: right; */
+}
+.srs-p3 {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  /* float: right; */
+  /* margin-right: 0; */
+  /* margin-top: 65px; */
+}
+.srs-dv1 {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: purple;
+  color: white;
+}
+.div-srchalt {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+  height: 460px;
+}
 /* -- --  */
 /* -- favorites --  */
 .div-fve {

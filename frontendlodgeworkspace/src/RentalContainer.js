@@ -3,7 +3,6 @@ import RentalCard from './RentalCard';
 
 export default class RentalContainer extends React.Component {
     render() {
-        console.log(this.props.onClickedRental)
         return(
             <div className="div-rct">
                 <div className="rct-div">

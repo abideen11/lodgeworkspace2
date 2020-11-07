@@ -31,12 +31,12 @@ export default class RentalReceipt extends React.Component {
                         <p className="rrd2-p5">From: {this.props.reservedRental.begin_Date.toLocaleDateString('en-US', this.state.options)}</p>
                         <p className="rrd2-p6">To: {this.props.reservedRental.end_Date.toLocaleDateString('en-US', this.state.options)}</p>
                         <p className="rrd2-p7">Total Day(s): {this.props.reservedRental.days}</p>
-                        <p className="rrd2-p8">Lodging Fee: ${this.props.reservedRental.lodging_Fee}</p>
-                        <p className="rrd2-p9">Service Fee: ${this.props.reservedRental.service_Fee}</p>
+                        <p className="rrd2-p8">Lodging Fee: ${this.props.reservedRental.lodging_Fee_fixed}</p>
+                        <p className="rrd2-p9">Service Fee: ${this.props.reservedRental.service_Fee_fixed}</p>
                         <div className="rrd2-d1">
                             <hr />
                         </div>
-                        <p className="rrd2-p10">Amount Paid: ${this.props.reservedRental.total_}</p>
+                        <p className="rrd2-p10">Amount Paid: ${this.props.reservedRental.total__fixed}</p>
                         {/* don't know why it's not black when to print  */}
                         <div className="rrd2-d2">
                             <hr />

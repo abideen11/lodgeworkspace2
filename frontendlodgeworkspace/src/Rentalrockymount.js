@@ -13,11 +13,10 @@ export default class Rentalrockymount extends React.Component {
         currentDate: new Date(),
         beginDate: new Date(),
         endDate: new Date(),
-        currentTime: null,
-        beginTime: null,
         lodgingFee: 0,
-        serviceFee: 0,
-        total: 0,
+        lodgingFee_fixed: 0,
+        serviceFee_fixed: 0,
+        total_fixed: 0,
         bookedLodging: false,
         bookedRental: {
             name: this.props.clickedRental.name,
@@ -31,9 +30,9 @@ export default class Rentalrockymount extends React.Component {
             begin_Date: null,
             end_Date: null,
             days: null,
-            lodging_Fee: null,
-            service_Fee: null,
-            total_: null,
+            lodging_Fee_fixed: null,
+            service_Fee_fixed: null,
+            total__fixed: null,
             receiptNumber: null
         }
     }
@@ -54,8 +53,13 @@ export default class Rentalrockymount extends React.Component {
     onFees = () => (
         this.setState({
             lodgingFee: ((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price,
-            serviceFee: Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
-            total: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10
+            lodgingFee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price).toFixed(2),
+            // serviceFee: Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
+            // checkTime: (this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24),
+            serviceFee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15).toFixed(2),
+            // service_Fee_string: Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10).toFixed(2),
+            // total: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
+            total_fixed: ((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15)).toFixed(2)
         })
     )
     onBookedRental = () => {
@@ -65,9 +69,15 @@ export default class Rentalrockymount extends React.Component {
                 begin_Date: this.state.beginDate,
                 end_Date: this.state.endDate,
                 days: (this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24),
-                lodging_Fee: ((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price,
-                service_Fee: Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
-                total_: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
+                // lodging_Fee: ((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price,
+                // lodgingFee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price).toFixed(2),
+                lodging_Fee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price).toFixed(2),
+                // service_Fee: Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
+                // serviceFee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15).toFixed(2),
+                service_Fee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15).toFixed(2),
+                // total_: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + Math.round((((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)*0.15) + Number.EPSILON)*10)/10,
+                // total_fixed: ((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15)).toFixed(2)
+                total__fixed: ((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price) + (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15)).toFixed(2),
                 receiptNumber: Math.floor(Math.random() * 999999) + 100000
             }
         }))
@@ -104,9 +114,13 @@ export default class Rentalrockymount extends React.Component {
     // }
     // onBookedRental = () => {}
     render() {
-        console.log(this.props.allRentals)
+        console.log(this.state.total_fixed)
+        // console.log(this.state.checkTime)
+        console.log(this.state.serviceFee_fixed)
+        console.log(this.state.lodgingFee_fixed)
+        // console.log(this.props.allRentals)
         // console.log(this.props.clickedRental)
-        console.log(this.props.onAllRentals)
+        // console.log(this.props.onAllRentals)
         console.log((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))
         // console.log(this.state.beginDate)
         // console.log(this.state.endDate)
@@ -173,11 +187,11 @@ export default class Rentalrockymount extends React.Component {
                             <hr />
                         </div>
                         <p className="rdv2-div8p1">Lodging:</p>
-                        <p className="rdv2-div8p2">{this.state.lodgingFee}</p>
+                        <p className="rdv2-div8p2">${this.state.lodgingFee_fixed}</p>
                         <p className="rdv2-div8p3">Service fee (15%):</p>
-                        <p className="rdv2-div8p4">{this.state.serviceFee}</p>
+                        <p className="rdv2-div8p4">${this.state.serviceFee_fixed}</p>
                         <p className="rdv2-div8p5">Total:</p>
-                        <p className="rdv2-div8p6">{this.state.total}</p>
+                        <p className="rdv2-div8p6">${this.state.total_fixed}</p>
                         {/* <span className="rdv2-div8s1" onClick={this.onBookedLodging}>Accept</span> */}
                         {
                             this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) ?

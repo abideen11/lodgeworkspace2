@@ -53,8 +53,7 @@ class App extends React.Component {
     allRentals: [],
     reviewRental: null,
     searchData: [],
-    favorites: [],
-    hosts2: []
+    favorites: []
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -96,20 +95,19 @@ class App extends React.Component {
       }
     )
   }
-  aFavorite = () => {
-    this.setState({favorites: this.state.hosts.filter(i => i.fave === true)})
-  }
+  onFavorite = () => {this.setState({favorites: this.state.hosts.filter(i => i.fave === true)})}
   render() {
     return(
       <BrowserRouter>
         <div>
-          <Route render={() => <Header onSearch={this.onSearch} hosts2={this.state.hosts2}  />} />
+          <Route render={() => <Header onSearch={this.onSearch}favorites={this.state.favorites} onFavorite={this.onFavorite} />} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/favorites" render={() => <RentalFavorites favorites={this.state.favorites} />} />
             <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
             <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
-            <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } />
+            {/* <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } /> */}
+            <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } />
             <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} />} />
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} />} />
@@ -118,7 +116,6 @@ class App extends React.Component {
             <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} />} />
             <Route path="/rentalreviewprompt" component={RentalReviewPrompt} />
             <Route path="/search" render={() => <Search searchData={this.state.searchData} onClickedRental={this.onClickedRental} />} />
-            {/* <Route path="/rentalform" render={() => <RentalForm clickedRental={this.state.clickedRental} />} /> */}
             <Route path="/login" component={LogIn} />
             <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />

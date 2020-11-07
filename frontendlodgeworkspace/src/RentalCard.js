@@ -1,9 +1,8 @@
-import { fas, faHeart } from '@fortawesome/free-solid-svg-icons' 
+import { faHeart } from '@fortawesome/free-solid-svg-icons' 
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 
 export default class RentalCard extends React.Component {
     state = {
@@ -50,9 +49,9 @@ export default class RentalCard extends React.Component {
                         }
                         {
                             this.state.fave === false ?
-                            <div className="rcd-sdv6"  onClick={() => {this.onHeartClicked(this.props.host); this.props.isFavorite()}}><FontAwesomeIcon icon={farHeart}/></div>
+                            <div className="rcd-sdv6"  onClick={() => this.onHeartClicked(this.props.host)}><FontAwesomeIcon icon={farHeart}/></div>
                             :
-                            <div className="rcd-sdv6alt" onClick={() => {this.onHeartClicked(this.props.host); this.props.isFavorite()}}><FontAwesomeIcon icon={faHeart}/></div>
+                            <div className="rcd-sdv6alt" onClick={() => this.onHeartClicked(this.props.host)}><FontAwesomeIcon icon={faHeart}/></div>
                         }
                     </div>
                     <hr />

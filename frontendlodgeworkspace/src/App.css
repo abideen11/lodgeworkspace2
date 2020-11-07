@@ -375,7 +375,7 @@ ul.hd2-ul {
   margin: 0 auto;
   width: 800px;
   height: 500px;
-  background-color: pink;
+  /* background-color: pink; */
   padding: 20px;
 }
 /* .rdv2-div2 {
@@ -390,14 +390,14 @@ ul.hd2-ul {
   height: 100px;
   padding: 10px;
 }
-.dv2-rfm {
-  background-color: palegoldenrod;
+/* .dv2-rfm {
+  background-color: rgb(77, 75, 63);
   padding: 10px;
-}
-.dv2-rfm2 {
+} */
+/* .dv2-rfm2 {
   background-color: yellow;
   padding: 10px;
-}
+} */
 .rdv2-div img {
   width: 100%;
   height: 100%;
@@ -507,19 +507,30 @@ ul.hd2-ul {
   top: 54px;
   left: 300px;
 }
-.rdv2-div7s1 {
+/* .rdv2-div7s1 {
   position: absolute;
   top: 88px;
   left: 400px;
   background-color: purple;
   color: white;
-  /* margin: 0 auto; */
   display: flex;
   justify-content: center;
-  /* text-align: center; */
   width: 60px;
   height: 30px;
   border-radius: 5px;
+} */
+.rdv2-div7s1 {
+  position: absolute;
+  background-color: purple;
+  color: white;
+  top: 88px;
+  left: 400px;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* .rdv2-div7d3 {
   position: absolute;
@@ -577,7 +588,7 @@ ul.hd2-ul {
   top: 100px;
   left: 360px;
 }
-.rdv2-div8s1 {
+/* .rdv2-div8s1 {
   position: absolute;
   top: 180px;
   left: 400px;
@@ -588,9 +599,21 @@ ul.hd2-ul {
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+} */
+.rdv2-div8s1 {
+  position: absolute;
+  background-color: purple;
+  color: white;
+  top: 180px;
+  left: 400px;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.rdv2-div8s1alt {
+/* .rdv2-div8s1alt {
   position: absolute;
   top: 180px;
   left: 400px;
@@ -601,6 +624,19 @@ ul.hd2-ul {
   border-radius: 5px;
   display: flex;
   justify-content: center;
+} */
+.rdv2-div8s1alt {
+  position: absolute;
+  background-color: grey;
+  color: white;
+  top: 180px;
+  left: 400px;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .rcd-dv {
   position: relative;

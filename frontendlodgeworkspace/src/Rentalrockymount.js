@@ -114,21 +114,7 @@ export default class Rentalrockymount extends React.Component {
     // }
     // onBookedRental = () => {}
     render() {
-        console.log(this.state.total_fixed)
-        // console.log(this.state.checkTime)
-        console.log(this.state.serviceFee_fixed)
-        console.log(this.state.lodgingFee_fixed)
-        // console.log(this.props.allRentals)
-        // console.log(this.props.clickedRental)
-        // console.log(this.props.onAllRentals)
-        console.log((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))
-        // console.log(this.state.beginDate)
-        // console.log(this.state.endDate)
-        // console.log(this.state.currentTime,"current")
-        // console.log(this.state.beginTime,"begin")
-        // console.log(this.state.changedDate)
         return(
-            // this.state.bookedLodging ? <p>Thank you</p> :
             <div className="div-rfm">
                 <div className="rfm-div"></div>
                 <div className="rfm-div2">
@@ -171,17 +157,10 @@ export default class Rentalrockymount extends React.Component {
                         <p className="rdv2-div7p2">Please choose your check-out date:</p>
                         <div className="rdv2-div7d2"><DatePicker selected={this.state.endDate} onChange={this.onEndDate} /></div>
                         <span className="rdv2-div7s1" onClick={this.isDateVaild}>Book</span>
-                        {/* <div className="rdv2-div7d3">
-                            <p>Test</p>
-                        </div> */}
-                        {/* <div className="rdv2-div7d3">Test</div> */}
                     </div>
-                    {/* <br /> */}
                     <br />
                     <br />
-                    {/* <h1>Testing</h1> */}
                     <div className="rdv2-div8">
-                        {/* <p className="rdv2-div8p1">Fees</p> */}
                         <div className="rdv2-div8d1">
                             <p>Fees:</p>
                             <hr />
@@ -192,16 +171,13 @@ export default class Rentalrockymount extends React.Component {
                         <p className="rdv2-div8p4">${this.state.serviceFee_fixed}</p>
                         <p className="rdv2-div8p5">Total:</p>
                         <p className="rdv2-div8p6">${this.state.total_fixed}</p>
-                        {/* <span className="rdv2-div8s1" onClick={this.onBookedLodging}>Accept</span> */}
                         {
                             this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) ?
                             <div className="rdv2-div8s1" onClick={() => {this.props.onReservedRental(this.state.bookedRental) ; this.addRental() }}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div>
                             :
                             <div className="rdv2-div8s1alt" disabled>Accept</div>
                         }
-                        {/* <button className="rdv2-div8s1" onClick={this.onBookedLodging}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></button> */}
                     </div>
-                    {/* <p>{this.props.clickedRental.rental}</p> */}
                 </div>
                 <div className="rfm-div3"></div>
             </div>

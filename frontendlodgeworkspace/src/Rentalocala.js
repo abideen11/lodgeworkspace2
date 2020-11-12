@@ -76,11 +76,13 @@ export default class Rentalocala extends React.Component {
                 this.onBookedRental()
             }
             else {
-                alert("Please choose check-in date and check-out date with days between that are equal or less than the max days.")
+                alert("Please choose a check-in date and a check-out date where the days between is equal or less than the max days.")
             }
         }
     }
-    addRental = () => {this.props.allRentals.push(this.state.bookedRental)}
+    addRental = () => {
+        this.props.allRentals.push(this.state.bookedRental)
+    }
     render() {
         return(
             <div className="div-rfm">
@@ -130,13 +132,13 @@ export default class Rentalocala extends React.Component {
                         </div>
                         <p className="rdv2-div8p1">Lodging:</p>
                         <p className="rdv2-div8p2">${this.state.lodgingFee_fixed}</p>
-                        <p className="rdv2-div8p3">Service fee (15 %):</p>
+                        <p className="rdv2-div8p3">Service fee (15%):</p>
                         <p className="rdv2-div8p4">${this.state.serviceFee_fixed}</p>
                         <p className="rdv2-div8p5">Total:</p>
                         <p className="rdv2-div8p6">${this.state.total_fixed}</p>
                         {
                             this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) ?
-                            <div className="rdv2-div8s1" onClick={() => {this.props.onReservedRental(this.state.bookedRental) ; this.addRental()}}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div> 
+                            <div className="rdv2-div8s1" onClick={() => {this.props.onReservedRental(this.state.bookedRental); this.addRental()}}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div> 
                             :
                             <div className="rdv2-div8s1alt" disabled>Accept</div>
                         }

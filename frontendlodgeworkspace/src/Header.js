@@ -29,8 +29,8 @@ export default class Header extends React.Component {
                         <span className="hd2-sp">Account <FontAwesomeIcon icon={faUserCircle} /></span>
                         <div className="hd2-div">
                             <ul className="hd2-ul">
-                                <li>Log In</li>
-                                <li>Register</li>
+                                <li><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Log In</Link></li>
+                                <li><Link to="/register" style={{ color: 'inherit', textDecoration: 'none' }}>Register</Link></li>
                             </ul>
                         </div>
                     </div>

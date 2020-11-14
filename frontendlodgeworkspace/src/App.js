@@ -23,6 +23,7 @@ import RentalReviewPrompt from './RentalReviewPrompt';
 import Temporary from './Temporary';
 import Search from './Search';
 import RentalFavorites from './RentalFavorites';
+import Register from './Register';
 
 // function App() {
 //   return (
@@ -64,15 +65,15 @@ class App extends React.Component {
       })
     })
   }
-  componentDidUpdate() {
-    fetch("http://localhost:3000/hosts")
-    .then(r => r.json())
-    .then(data => {
-      this.setState({
-        hosts: data
-      })
-    })
-  }
+  // componentDidUpdate() {
+  //   fetch("http://localhost:3000/hosts")
+  //   .then(r => r.json())
+  //   .then(data => {
+  //     this.setState({
+  //       hosts: data
+  //     })
+  //   })
+  // }
   onClickedRental = (rental) => {
     this.setState({
       clickedRental: rental
@@ -120,6 +121,7 @@ class App extends React.Component {
             <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} />} />
             <Route path="/rentalreviewprompt" component={RentalReviewPrompt} />
             <Route path="/search" render={() => <Search searchData={this.state.searchData} onClickedRental={this.onClickedRental} />} />
+            <Route path="/register" component={Register} />
             <Route path="/login" component={LogIn} />
             <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />

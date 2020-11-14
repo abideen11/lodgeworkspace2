@@ -1,4 +1,5 @@
 class HostsController < ApplicationController
+    skip_before_action :check_authentication
 
     def index
         @hosts = Host.all 

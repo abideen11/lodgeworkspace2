@@ -10,8 +10,7 @@ export default class SearchResult extends React.Component {
                     <img src={this.props.host.rental_img1} alt="plc" />
                     <p className="srs-p1">Location: {this.props.host.location}</p>
                     <p className="srs-p2">Rental: {this.props.host.rental}</p>
-                    <p className="srs-p3">Price: {this.props.host.price}</p>
-                    {/* <div className="srs-dv1">Select</div> */}
+                    <p className="srs-p3">Price: ${this.props.host.price}</p>
                     {
                         this.props.host.location === "Rocky Mount, NC" ?
                         <div className="srs-dv1" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/rockymount" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
@@ -27,7 +26,6 @@ export default class SearchResult extends React.Component {
                         :
                         <div className="srs-dv1" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/greencovesprings" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                     }
-                    {/* <h1>Zoned out</h1> */}
                 </div>
                 <br />
             </div>

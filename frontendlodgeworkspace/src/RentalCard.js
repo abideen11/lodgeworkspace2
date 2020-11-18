@@ -13,13 +13,11 @@ export default class RentalCard extends React.Component {
             fave: !this.state.fave
         })
     }
-    
     onHeartClicked = (host) => {
         console.log("Clicked fave")
         // Update the state of the fave on the server
         fetch(`http://localhost:3000/hosts/${host.id}/favourite`, {method: "POST", mode: "cors"})
         .then(() => { console.log("Updated fave on the server") })
-
         // Update the state of the heart in the browser
         this.changeFavorite()
     }
@@ -47,12 +45,12 @@ export default class RentalCard extends React.Component {
                             : 
                             <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/greencovesprings" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                         }
-                        {
+                        {/* {
                             this.state.fave === false ?
                             <div className="rcd-sdv6"  onClick={() => this.onHeartClicked(this.props.host)}><FontAwesomeIcon icon={farHeart}/></div>
                             :
                             <div className="rcd-sdv6alt" onClick={() => this.onHeartClicked(this.props.host)}><FontAwesomeIcon icon={faHeart}/></div>
-                        }
+                        } */}
                     </div>
                     <hr />
                 </div>

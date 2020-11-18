@@ -76,7 +76,7 @@ export default class Rentalgreencove extends React.Component {
                 this.onBookedRental()
             }
             else {
-                alert("Please choose a check-in date and a check-out date where the days between is equal or less than the max days.")
+                alert("Please choose a check-in date and a check-out date where the days between is equal or less than the days next to the clock.")
             }
         }
     }
@@ -102,7 +102,8 @@ export default class Rentalgreencove extends React.Component {
                         <div className="dv2-rfm2" onClick={() => this.notShowRentalImg1()}><img src={this.props.clickedRental.rental_img2} alt="plc" /></div>
                     </div>
                     <div className="rdv2-div3">
-                        <p>Adjacent to Jacksonville, Green Cove Springs is a great place to stay at if you 
+                        <p>
+                            Adjacent to Jacksonville, Green Cove Springs is a great place to stay if you
                             or anyone else is visiting the Jacksonville area. The weather is always great
                             and there are tons of fun activities.
                         </p>
@@ -131,13 +132,13 @@ export default class Rentalgreencove extends React.Component {
                             <hr />
                         </div>
                         <p className="rdv2-div8p1">Lodging</p>
-                        <p className="rdv2-div8p2">$ {this.state.lodgingFee_fixed} </p>
+                        <p className="rdv2-div8p2">${this.state.lodgingFee_fixed} </p>
                         <p className="rdv2-div8p3">Service fee(15%)</p>
-                        <p className="rdv2-div8p4">$ {this.state.serviceFee_fixed}</p>
+                        <p className="rdv2-div8p4">${this.state.serviceFee_fixed}</p>
                         <p className="rdv2-div8p5">Total</p>
-                        <p className="rdv2-div8p6">$ {this.state.total_fixed}</p>
+                        <p className="rdv2-div8p6">${this.state.total_fixed}</p>
                         {
-                            this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) ?
+                            this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) && this.state.endDate.getTime() > this.state.beginDate.getTime() ?
                             <div className="rdv2-div8s1" onClick={() => {this.props.onReservedRental(this.state.bookedRental); this.addRental()}}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div>
                             : 
                             <div className="rdv2-div8s1alt" disabled>Accept</div>

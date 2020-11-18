@@ -10,26 +10,16 @@ export default class HomeFirst extends React.Component {
                     <h1>Explore New Horizons</h1>
                     <h3>South Beach, Graceland, Disney World, Universal Studios & More</h3>
                     <div className="hf2-div">
-                        {/* <p>This is a guideline</p> */}
                         <div className="hf2-dv"></div>
                         <div className="hf2-dv2">
-                            <div className="hf2d-dv">
-                                {/* <img src="https://media.bizj.us/view/img/7865962/universal-1*1200xx6000-3381-0-366.jpg" alt="plc" /> */}
-                            </div>
-                            <div className="hf2d-dv2">
-                                {/* <img src="" alt="plc" /> */}
-                            </div>
-                            <div className="hf2d-dv3">
-                                {/* <img src="" alt="plc" /> */}
-                            </div>
-                            <div className="hf2d-dv4">
-                                {/* <img src="" alt="plc" /> */}
-                            </div>
+                            <div className="hf2d-dv"></div>
+                            <div className="hf2d-dv2"></div>
+                            <div className="hf2d-dv3"></div>
+                            <div className="hf2d-dv4"></div>
                         </div>
                         <div className="hf2-dv3"></div>
                     </div>
                     <span><Link to="/rentals" style={{ color: 'inherit', textDecoration: 'none' }}>See All Options</Link></span>
-                    {/* <div>See All Options</div> */}
                 </div>
                 <div className="hfs-div3"></div>
             </div>

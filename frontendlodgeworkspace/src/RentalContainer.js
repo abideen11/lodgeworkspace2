@@ -19,10 +19,19 @@ export default class RentalContainer extends React.Component {
                         <h2>Check Out Some Listings</h2>
                         <br />
                         <div className="rcd2-dv">
-                            <div className="rcd2-div"></div>
+                            <div className="rcd2-div">
+                                <h3 className="rcd2-d1h31">State:</h3>
+                                <select className="rcd2-d1s1" value={this.props.value} onChange={e => this.props.onFilterHosts(e.target.value)}>
+                                    <option value="Please choose a state">Please choose a state</option>
+                                    <option value="FL">FL</option>
+                                    <option value="MI">MI</option>
+                                    <option value="NC">NC</option>
+                                    <option value="TN">TN</option>
+                                </select>
+                            </div>
                             <div className="rcd2-div2">
                                 <hr />
-                                {this.props.hosts.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} />)}
+                                {this.props.hostsData.map(host => <RentalCard host={host} onClickedRental={this.props.onClickedRental} />)}
                             </div>
                         </div>
                     </div>

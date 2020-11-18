@@ -51,9 +51,7 @@ export default class Register extends React.Component {
             <div className="div-rgs">
                 <div className="rgs-div">
                     <div className="rgs-d1"></div>
-                    {/* <div className="rgs-d2"></div> */}
                     <div className="rgs-d3">
-                        {/* <br /> */}
                         <h1>Register</h1>
                         <br />
                         <br />

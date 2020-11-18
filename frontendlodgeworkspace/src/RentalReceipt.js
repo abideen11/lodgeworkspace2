@@ -7,21 +7,13 @@ export default class RentalReceipt extends React.Component {
         options: { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
     }
     render() {
-        console.log(this.props.reservedRental)
-        console.log(this.props.reservedRental.begin_Date.toLocaleDateString('en-US', this.state.options))
         return(
             <div className="div-rre">
                 <div className="rre-div"></div>
                 <div className="rre-div2">
                     <p className="rre-div2p" onClick={() => window.print()}><FontAwesomeIcon icon={faPrint} /> Print for Your Record</p>
-                    {/* <h1 className="rre-div2h1">Rental Receipt</h1> */}
-                    {/* <br /> */}
-                    {/* <br /> */}
                     <div className="rrd2-div">
-                        {/* <h1>Receipt #: {Math.floor(Math.random() * 999999) + 100000}</h1> */}
                         <h1>Receipt #: {this.props.reservedRental.receiptNumber}</h1>
-                        {/* <h1>Math.floor  </h1> */}
-                        {/* <h1>{} </h1> */}
                         <br />
                         <br />
                         <p className="rrd2-p1">Host: {this.props.reservedRental.name}</p>
@@ -37,11 +29,9 @@ export default class RentalReceipt extends React.Component {
                             <hr />
                         </div>
                         <p className="rrd2-p10">Amount Paid: ${this.props.reservedRental.total__fixed}</p>
-                        {/* don't know why it's not black when to print  */}
                         <div className="rrd2-d2">
                             <hr />
                         </div>
-                        {/* <hr /> */}
                         <h2 className="rrd2-h2">Thank You for Being an Awesome Customer!</h2>
                     </div>
                     <br />

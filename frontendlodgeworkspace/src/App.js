@@ -54,14 +54,16 @@ class App extends React.Component {
     allRentals: [],
     reviewRental: null,
     searchData: [],
-    favorites: []
+    favorites: [],
+    hostsData: []
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
     .then(r => r.json())
     .then(data => {
       this.setState({
-        hosts: data
+        hosts: data,
+        hostsData: data
       })
     })
   }
@@ -96,7 +98,17 @@ class App extends React.Component {
       }
     )
   }
-  onFavorite = () => {this.setState({favorites: this.state.hosts.filter(i => i.fave === true)})}
+  // onFavorite = () => {this.setState({favorites: this.state.hosts.filter(i => i.fave === true)})}
+  onFilterHosts = (e) => {
+    if(e === "Please choose a state") {
+      this.setState({hostsData: this.state.hosts})
+    }
+    else {
+      if(e === "FL" || e === "MI" || e === "NC" || e === "TN") {
+        this.setState({hostsData: this.state.hosts.filter(i => i.location[i.location.length-2] === e[0] && i.location[i.location.length-1] === e[1])})
+      }
+    }
+  }
   render() {
     return(
       <BrowserRouter>
@@ -105,16 +117,11 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/favorites" render={() => <RentalFavorites favorites={this.state.favorites} />} />
-            <Route path="/rentals" render={() => <RentalContainer hosts={this.state.hosts} onClickedRental={this.onClickedRental} />} />
+            <Route path="/rentals" render={() => <RentalContainer hostsData={this.state.hostsData} onClickedRental={this.onClickedRental} onFilterHosts={this.onFilterHosts} />} />
             <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
-            {/* <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} /> } /> */}
             <Route path="/ocala" render={() => <Rentalocala clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
-            {/* <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} /> } /> */}
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
-            {/* <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} />} /> */}
             <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
-            {/* <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} />} /> */}
-            {/* <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} /> */}
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
             <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} onReviewRental={this.onReviewRental} />} />

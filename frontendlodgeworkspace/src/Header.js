@@ -18,9 +18,9 @@ export default class Header extends React.Component {
                     <div title="Write A Review" className="hdr-div4">
                         <span className="hd4-sp"><Link to="/writereview" style={{ color: 'inherit', textDecoration: 'none' }}>Write A Review</Link></span>
                     </div>
-                    <div title="Favorites" className="hdr-div5">
+                    {/* <div title="Favorites" className="hdr-div5">
                         <span className="hd5-sp" onClick={() => this.props.onFavorite()}><Link to="/favorites" style={{ color: 'inherit', textDecoration: 'none' }}>Favorites</Link></span>
-                    </div>
+                    </div> */}
                     <div className="div-src">
                         <input className="inp-src" type="text" value={this.props.value} onChange={(e) => this.props.onSearch(e.target.value)} placeholder="Search" />
                         <span className="img-src"><Link to="/search"><FontAwesomeIcon icon={faSearch} /></Link></span>

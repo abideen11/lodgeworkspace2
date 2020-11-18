@@ -37,12 +37,12 @@ export default class LogIn extends React.Component {
                         <br />
                         <br />
                         <form onSubmit={e => this.login(e)}>
-                            <label className="rgs-2lb">Username or Email Address
+                            <label className="rgs-2lb">Username or Email Address:
                             {" "}<input className="rgs-2ip" onChange={this.handleChange} name="username" placeholder="" type="username"></input>
                             </label>
                             <br />
                             <br />
-                            <label className="rgs-2lb">Password
+                            <label className="rgs-2lb">Password:
                             {" "}<input className="rgs-2ip2" onChange={this.handleChange} name="password" placeholder="" type="password"></input>
                             </label>
                             <br />

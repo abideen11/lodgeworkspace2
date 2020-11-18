@@ -3,8 +3,6 @@ import SearchResult from './SearchResult';
 
 export default class Search extends React.Component {
     render() {
-        console.log(this.props.onClickedRental)
-        // console.log(this.props.searchData)
         return(
             this.props.searchData.length > 0 ?
             <div className="div-srch">

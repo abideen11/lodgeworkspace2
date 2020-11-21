@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// import flathopperlogo from './flathopperdigimg.png'
+import flathopperimg from './flathopperdigimg2.png'
+
 export default class LogIn extends React.Component {
     handleChange = e => {
         this.setState({
@@ -31,7 +34,9 @@ export default class LogIn extends React.Component {
         return(
             <div className="div-rgs">
                 <div className="rgs-div">
-                    <div className="rgs-d1"></div>
+                    <div className="rgs-d1">
+                        <p><img src={flathopperimg} alt="plc" /></p>
+                    </div>
                     <div className="rgs-d3">
                         <h1>Log In</h1>
                         <br />

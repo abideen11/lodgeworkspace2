@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import flathopperimg from './flathopperdigimg2.png'
+
 export default class Register extends React.Component {
     state = {
         username: "",
@@ -50,7 +52,9 @@ export default class Register extends React.Component {
             :
             <div className="div-rgs">
                 <div className="rgs-div">
-                    <div className="rgs-d1"></div>
+                    <div className="rgs-d1">
+                        <p><img src={flathopperimg} alt="plc" /></p>
+                    </div>
                     <div className="rgs-d3">
                         <h1>Register</h1>
                         <br />

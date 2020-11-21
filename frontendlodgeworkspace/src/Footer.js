@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab, faFacebookF, faTwitter, faInstagram, faLinkedinIn, faPinterestP } from '@fortawesome/free-brands-svg-icons'
 import { far, faCopyright } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom';
+
+import flathopperlogo from './flathopperdigimg.png'
 export default class Footer extends React.Component {
     render() {
         return(
@@ -10,7 +12,8 @@ export default class Footer extends React.Component {
                 <div className="ftr-div"></div>
                 <div className="ftr-div2">
                     <br/>
-                    <span title="Flathopper">Insert Here</span>
+                    <img src={flathopperlogo} alt="plc" />
+                    {/* <span title="Flathopper">Insert Here</span> */}
                     <br/>
                     <div className="ft2-dv">
                         <h4>Company</h4>

@@ -43,9 +43,14 @@
   display: grid;
   grid-template-columns: -1fr 11fr -1fr;
 }
-.hdr-div, .hdr-div3, .hdr-div4, .hdr-div5 {
+.hdr-div {
   float: left;
   margin-left: 50px;
+}
+.hdr-div3, .hdr-div4, .hdr-div5 {
+  float: left;
+  margin-left: 50px;
+  margin-top: 6px;
 }
 .hdr-div3:hover, .hdr-div4:hover, .hdr-div5:hover {
   color: white;
@@ -61,6 +66,7 @@
 .hdr-div2 {
   float: right;
   margin-right: 50px;
+  margin-top: 6px;
 }
 /* .hd2-sp {
   float: left;
@@ -73,7 +79,7 @@
 .div-src {
   position: relative;
   float: left;
-  margin-top: -5px;
+  margin-top: 2px;
   margin-left: 250px;
   width: 330px;
   height: 100%;
@@ -1051,8 +1057,16 @@ ul.hd2-ul {
   /* text-align: center; */
   margin: 0 auto;
   background-color: lightblue;
-  width: 180px;
+  width: 220px;
   height: 150px;
+}
+.rgs-d1 p {
+  /* font-size: 60px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: purple; */
+  /* background-color: purple; */
 }
 .rgs-d2 {
   margin: 0 auto;
@@ -1085,6 +1099,8 @@ ul.hd2-ul {
 }
 .rgs-2ip3 {
   font-size: 20px;
+  /* width: 60px; */
+  /* height: 30px; */
   margin-left: 82px;
 }
 /* .rgs-2ip4 {
@@ -1095,7 +1111,14 @@ ul.hd2-ul {
 }
 .rgs-2ip4 {
   font-size: 20px;
-  margin-left: 452px;
+  width: 90px;
+  height: 40px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+  margin-left: 440px;
+  background-color: purple;
+  color: white;
 }
 /* -- --  */
 /* -- Log In --  */
@@ -1126,5 +1149,16 @@ ul.hd2-ul {
 .div-err {
   text-align: center;
   height: 460px;
+}
+.err-dv {
+  /* z-index: -1; */
+  /* position: absolute; */
+  /* background-color: red; */
+  width: 500px;
+  height: 300px;
+  /* top: 0; */
+  /* left: 400px; */
+  margin: 0 auto;
+  /* top: -10px; */
 }
 /* -- -- */

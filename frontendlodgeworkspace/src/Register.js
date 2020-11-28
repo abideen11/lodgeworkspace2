@@ -46,6 +46,11 @@ export default class Register extends React.Component {
                     <div className="rgs-d1"></div>
                     <div className="rgs-d3">
                         <h1>Thank you for registering</h1>
+                        <br />
+                        <h2>Log In</h2>
+                        <br />
+                        {/* <span>Log In</span> */}
+                        <div><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Log In</Link></div>
                     </div>
                 </div>
             </div>

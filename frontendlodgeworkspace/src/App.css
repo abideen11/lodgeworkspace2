@@ -120,12 +120,15 @@ ul.hd2-ul {
   /* margin-left: 10px; */
 }
 .hd2-ul li:hover {
-  background-color: palegreen;
+  background-color: lightyellow;
 }
 
 .div-hfs, .div-hsc {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
+}
+.div-hfs {
+  background-color: tomato;
 }
 /* .hfs-div {
   background-color: teal;
@@ -135,21 +138,25 @@ ul.hd2-ul {
 } */
 .hfs-div2 {
   height: 750px;
-  background-color: burlywood;
+  /* background-color: tomato; */
+}
+.hfs-div2 h1, .hfs-div2 h3 {
+  font-family: Georgia, serif;
+  color: white;
 }
 .hf2-div {
   /* text-align: center; */
   display: grid;
   grid-template-columns: 1fr 7fr 1fr;
   height: 500px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
-.hf2-dv {
-  background-color: red;
+/* .hf2-dv {
+  background-color: purple;
 }
 .hf2-dv3 {
-  background-color: blue;
-}
+  background-color: purple;
+} */
 .hf2-dv2 {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -214,7 +221,8 @@ ul.hd2-ul {
   /* padding: 10px 2px; */
   padding-top: 7.5px;
   /* padding-bottom: 5px; */
-  background-color: tomato;
+  background-color: green;
+  color: white;
   /* margin: 10px 0 70px 0; */
   /* margin-right: 10px; */
   /* margin-bottom: 10px; */
@@ -236,12 +244,16 @@ ul.hd2-ul {
   right: 210px;
   padding-top: 7.5px;
 } */
-.hsc-div2 {
-  background-color: cornflowerblue;
+.div-hsc {
+  background-color: teal;
 }
+/* .hsc-div2 {
+  background-color: cornflowerblue;
+} */
 .hsc-div2 h1, .hsc-div2 p {
   margin-left: 30px;
   padding: 10px;
+  font-family: Georgia, serif;
 }
 
 /* --footer-- */
@@ -308,6 +320,9 @@ ul.hd2-ul {
 /* -- --  */
 
 /* -- Rental Container -- */
+/* .div-rct {
+  font-family: Georgia, serif;
+} */
 /* .rct-div {
   background-image: url('https://www.visitnj.org/sites/default/files/MilesScenicKMP_Delaware-Water-Gap_645x415.jpg');
   background-repeat: repeat;
@@ -339,9 +354,9 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.rct-dv {
+/* .rct-dv {
   background-color: red;
-}
+} */
 .rct-dv2 h1 {
   text-align: center;
   margin-top: 0;
@@ -349,9 +364,9 @@ ul.hd2-ul {
 .rct-dv2 h2 {
   text-align: center;
 } 
-.rct-dv3 {
+/* .rct-dv3 {
   background-color: blue;
-}
+} */
 .rcd2-dv {
   display: flex;
   flex-wrap: wrap;
@@ -382,12 +397,12 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.rfm-div {
+/* .rfm-div {
   background-color: orange;
-}
-.rfm-div3 {
+} */
+/* .rfm-div3 {
   background-color: palevioletred;
-}
+} */
 .rdv2-div {
   /* text-align: center; */
   display: block;
@@ -792,12 +807,12 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.rrv-div {
+/* .rrv-div {
   background-color: orange;
-}
-.rrv-div3 {
+} */
+/* .rrv-div3 {
   background-color: palegoldenrod;
-}
+} */
 .rrv-div2 {
   height: 460px;
 }
@@ -807,6 +822,8 @@ ul.hd2-ul {
 .rrv-d2d {
   /* margin: 0 auto; */
   text-align: center;
+  padding-bottom: 20px;
+  /* margin-bottom: 20px; */
   /* width: 700px; */
   /* height: 200px; */
   /* background-color: blue; */
@@ -816,7 +833,7 @@ ul.hd2-ul {
   position: relative;
   width: 700px;
   height: 200px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .rrvc-p {
   position: absolute;
@@ -960,12 +977,12 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.srch-div {
+/* .srch-div {
   background-color: teal;
-}
-.srch-div3 {
+} */
+/* .srch-div3 {
   background-color: brown;
-}
+} */
 .srch-div2 {
   text-align: center;
 }
@@ -977,7 +994,7 @@ ul.hd2-ul {
   position: relative;
   width: 550px;
   height: 190px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* text-align: center; */
 }
 .srs-div img {
@@ -1038,25 +1055,28 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.fve-div {
+/* .fve-div {
   background-color: saddlebrown;
-}
-.fve-div3 {
+} */
+/* .fve-div3 {
   background-color: slategrey;
-}
+} */
 /* -- --  */
 
 /* -- Register --  */
+/* .div-rgs {
+  background-color: purple;
+} */
 .rgs-div {
   margin: 0 auto;
-  background-color: khaki;
+  /* background-color: khaki; */
   width: 1000px;
   height: 800px;
 }
 .rgs-d1 {
   /* text-align: center; */
   margin: 0 auto;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   width: 220px;
   height: 150px;
 }
@@ -1076,13 +1096,25 @@ ul.hd2-ul {
 }
 .rgs-d3 {
   margin: 0 auto;
-  background-color: white;
+  background-color: grey;
   width: 660px;
   height: 470px;
   border-radius: 20px;
 }
-.rgs-d3 h1 {
+.rgs-d3 h1, .rgs-d3 h2 {
   text-align: center;
+}
+.rgs-d3 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 280px;
+  background-color: blue;
+  /* margin: 0 auto; */
+  /* float: inherit; */
 }
 .rgs-2lb{
   /* text-align: center; */
@@ -1117,7 +1149,7 @@ ul.hd2-ul {
   border-width: thin;
   border-radius: 5px;
   margin-left: 440px;
-  background-color: purple;
+  background-color: blue;
   color: white;
 }
 /* -- --  */

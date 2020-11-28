@@ -8,10 +8,14 @@ export default class RentalReview extends React.Component {
             <div className="div-rrv">
                 <div className="rrv-div"></div>
                 <div className="rrv-div2">
-                    <h1>This Is Rental Review Page</h1>
+                    {/* <h1>This Is Rental Review Page</h1> */}
+                    {this.props.allRentals.length === 1 ? 
+                    <h1>Rental Available for Review</h1>
+                    : 
+                    <h1>Rentals Available for Review</h1>
+                    }
                     <div className="rrv-d2d">
                         {this.props.allRentals.map(rent => <RentalReviewCard rent={rent} onReviewRental={this.props.onReviewRental} />)}
-                        <br />
                     </div>
                 </div>
                 <div className="rrv-div3"></div>

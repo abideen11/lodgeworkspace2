@@ -120,7 +120,7 @@ ul.hd2-ul {
   /* margin-left: 10px; */
 }
 .hd2-ul li:hover {
-  background-color: lightyellow;
+  background-color: violet;
 }
 
 .div-hfs, .div-hsc {
@@ -739,12 +739,12 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.rre-div {
+/* .rre-div {
   background-color: green;
-}
-.rre-div3 {
+} */
+/* .rre-div3 {
   background-color: orangered;
-}
+} */
 .rre-div2p {
   /* margin-top: 5px; */
   /* margin-right: 10px; */
@@ -762,7 +762,7 @@ ul.hd2-ul {
   margin: 0 auto;
   width: 1000px;
   height: 800px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .rrd2-div h1 {
   text-align: center;
@@ -813,8 +813,9 @@ ul.hd2-ul {
 /* .rrv-div3 {
   background-color: palegoldenrod;
 } */
-.rrv-div2 {
+.rrv-div2alt {
   height: 460px;
+  text-align: center;
 }
 .rrv-div2 h1 {
   text-align: center;
@@ -828,11 +829,11 @@ ul.hd2-ul {
   /* height: 200px; */
   /* background-color: blue; */
 }
-.div-rrvc {
-  margin: auto;
+.rrvc-div {
+  margin: 0 auto;
   position: relative;
-  width: 700px;
-  height: 200px;
+  width: 550px;
+  height: 190px;
   /* background-color: blue; */
 }
 .rrvc-p {
@@ -893,9 +894,12 @@ ul.hd2-ul {
   /* text-align: center; */
   display: block;
   margin: 0 auto;
-  width: 200px;
+  width: 400px;
   height: 200px;
-  background-color: yellow;
+  /* background-color: yellow; */
+}
+.rvf-div p {
+  text-align: center;
 }
 /* future img  */
 /* .rvf-div img {

@@ -23,7 +23,7 @@ export default class RentalReview extends React.Component {
             :
             <div className="div-rrv">
                 <div className="rrv-div"></div>
-                <div className="rrv-div2">
+                <div className="rrv-div2alt">
                     <h1>Please Return to This Page After You Checked Out of Your Rental</h1>
                 </div>
                 <div className="rrv-div3"></div>

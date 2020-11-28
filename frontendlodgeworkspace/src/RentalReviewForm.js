@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
+
+import flathopperimg from './flathopperdigimg2.png'
+
 export default class RentalReviewForm extends React.Component {
     state = {
         feedback: '',
@@ -13,7 +16,7 @@ export default class RentalReviewForm extends React.Component {
             <div className="div-rrvf">
                 <div className="rrvf-div"></div>
                 <div className="rrvf-div2">
-                    <div className="rvf-div"><p>Temproary</p></div>
+                    <div className="rvf-div"><p><img src={flathopperimg} alt="plc" /></p></div>
                     <h1 className="rvf-h">Commitment to Growth</h1>
                     <p className="rvf-p">
                         Always striving to have top-notch service, your feedback helps us a lot.

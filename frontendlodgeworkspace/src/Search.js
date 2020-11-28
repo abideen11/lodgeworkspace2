@@ -8,7 +8,11 @@ export default class Search extends React.Component {
             <div className="div-srch">
                 <div className="srch-div"></div>
                 <div className="srch-div2">
+                    {this.props.searchData.length === 1 ?
+                    <h1>Displaying Result</h1>
+                    :
                     <h1>Displaying Results</h1>
+                    }
                     <br />
                     {this.props.searchData.map(host => <SearchResult host={host} onClickedRental={this.props.onClickedRental} />)}
                 </div>

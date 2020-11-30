@@ -39,7 +39,7 @@
 
 .div-hdr {
   padding: 20px;
-  background-color: purple;
+  background-color: violet;
   display: grid;
   grid-template-columns: -1fr 11fr -1fr;
 }
@@ -120,15 +120,15 @@ ul.hd2-ul {
   /* margin-left: 10px; */
 }
 .hd2-ul li:hover {
-  background-color: violet;
+  background-color: purple;
 }
 
-.div-hfs, .div-hsc {
+.div-hfs, .div-hsc, .div-htrd, .div-hfrt {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
 .div-hfs {
-  background-color: tomato;
+  background-color: plum;
 }
 /* .hfs-div {
   background-color: teal;
@@ -245,7 +245,7 @@ ul.hd2-ul {
   padding-top: 7.5px;
 } */
 .div-hsc {
-  background-color: teal;
+  background-color: plum;
 }
 /* .hsc-div2 {
   background-color: cornflowerblue;
@@ -255,11 +255,60 @@ ul.hd2-ul {
   padding: 10px;
   font-family: Georgia, serif;
 }
+.div-htrd {
+  background-color: papayawhip;
+}
+.div-hfrt {
+  background-color: papayawhip;
+}
+.htrd-div2, .hfrt-div2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dv2-htrd, .dv2-hfrt {
+  flex: 50%;
+  height: 500px;
+  /* background-color: lightcoral; */
+}
+.dv22-htrd, .dv22-hfrt {
+  flex: 50%;
+  height: 500px;
+  /* background-color: lightskyblue; */
+}
+.htrd-d2d {
+  /* background-color: orange; */
+  margin: 0 auto;
+  height: 380px;
+  width: 460px;
+  margin-top: 40px;
+  /* padding-top: 50px; */
+}
+.htrd-d2d2, .hfrt-d2d {
+  background-color: blue;
+  margin: 0 auto;
+  height: 160px;
+  width: 380px;
+  margin-top: 190px;
+  font-family: Georgia, serif;
+  color: white;
+}
+.hfrt-d2d2 {
+  /* background-color: burlywood; */
+  height: 420px;
+  width: 460px;
+  margin-top: 40px;
+}
+
+
+
+
+
+
 
 /* --footer-- */
 .div-ftr {
   /* padding: 10px; */
-  background-color: purple;
+  background-color: violet;
   display: grid;
   grid-template-columns: 1fr 17fr 1fr;
   /* grid-template-columns: -1fr 11fr -1fr; */

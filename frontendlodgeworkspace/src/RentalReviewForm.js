@@ -41,7 +41,7 @@ export default class RentalReviewForm extends React.Component {
                     <textarea className="rvf-txt" value={this.state.feedback} onChange={this.onFeedback}></textarea>
                     {
                         this.state.feedback.length > 0 && this.state.rating > 0 ?
-                        <div className="rvf-div3"><Link to="/rentalreviewprompt" style={{ color: 'inherit', textDecoration: 'none' }}>Submit</Link></div>
+                        <div className="rvf-div3" onClick={() => this.props.hasReviewedRental()}><Link to="/rentalreviewprompt" style={{ color: 'inherit', textDecoration: 'none' }}>Submit</Link></div>
                         :
                         <div className="rvf-div3alt" disabled>Submit</div>
                     }

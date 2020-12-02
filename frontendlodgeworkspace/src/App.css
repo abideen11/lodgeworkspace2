@@ -221,7 +221,7 @@ ul.hd2-ul {
   /* padding: 10px 2px; */
   padding-top: 7.5px;
   /* padding-bottom: 5px; */
-  background-color: green;
+  background-color: purple;
   color: white;
   /* margin: 10px 0 70px 0; */
   /* margin-right: 10px; */
@@ -254,6 +254,7 @@ ul.hd2-ul {
   margin-left: 30px;
   padding: 10px;
   font-family: Georgia, serif;
+  color: white;
 }
 .div-htrd {
   background-color: papayawhip;
@@ -284,13 +285,13 @@ ul.hd2-ul {
   /* padding-top: 50px; */
 }
 .htrd-d2d2, .hfrt-d2d {
-  background-color: blue;
+  /* background-color: blue; */
   margin: 0 auto;
   height: 160px;
   width: 380px;
   margin-top: 190px;
   font-family: Georgia, serif;
-  color: white;
+  color: black;
 }
 .hfrt-d2d2 {
   /* background-color: burlywood; */
@@ -604,7 +605,7 @@ ul.hd2-ul {
 } */
 .rdv2-div7s1 {
   position: absolute;
-  background-color: purple;
+  background-color: violet;
   color: white;
   top: 88px;
   left: 400px;
@@ -685,7 +686,7 @@ ul.hd2-ul {
 } */
 .rdv2-div8s1 {
   position: absolute;
-  background-color: purple;
+  background-color: violet;
   color: white;
   top: 180px;
   left: 400px;
@@ -766,7 +767,7 @@ ul.hd2-ul {
   justify-content: center;
   align-items: center;
   /* padding: 10px; */
-  background-color: purple;
+  background-color: violet;
   color: white;
 }
 .rcd-sdv6 {
@@ -924,7 +925,7 @@ ul.hd2-ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: violet;
   color: white;
 }
 /* -- --  */
@@ -933,12 +934,12 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.rrvf-div {
-  background-color: brown;
-}
-.rrvf-div3 {
-  background-color: grey;
-}
+/* .rrvf-div {
+  background-color: violet;
+} */
+/* .rrvf-div3 {
+  background-color: violet;
+} */
 .rvf-div {
   /* text-align: center; */
   display: block;
@@ -980,7 +981,7 @@ ul.hd2-ul {
   resize: vertical;
 }
 .rvf-div3 {
-  background-color: orange;
+  background-color: violet;
   color: white;
   width: 90px;
   height: 40px;
@@ -1012,12 +1013,12 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.rrvp-div {
+/* .rrvp-div {
   background-color: cadetblue;
-}
-.rrvp-div3 {
+} */
+/* .rrvp-div3 {
   background-color: crimson;
-}
+} */
 .rrvp-div2 {
   padding: 20px;
   width: 100%;
@@ -1094,7 +1095,7 @@ ul.hd2-ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: purple;
+  background: violet;
   color: white;
 }
 .div-srchalt {
@@ -1149,7 +1150,7 @@ ul.hd2-ul {
 }
 .rgs-d3 {
   margin: 0 auto;
-  background-color: grey;
+  background-color: gainsboro;
   width: 660px;
   height: 470px;
   border-radius: 20px;

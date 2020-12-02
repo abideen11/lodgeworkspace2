@@ -55,7 +55,8 @@ class App extends React.Component {
     reviewRental: null,
     searchData: [],
     favorites: [],
-    hostsData: []
+    hostsData: [],
+    bookedRentals: []
   }
   componentDidMount() {
     fetch("http://localhost:3000/hosts")
@@ -87,6 +88,9 @@ class App extends React.Component {
     })
   }
   onReviewRental = (rental) => {this.setState({reviewRental: rental})}
+  hasReviewedRental = () => {
+    this.setState({allRentals: this.state.allRentals.filter(i => i !== this.state.reviewRental)})
+  }
   onSearch = (e) => {
     this.state.hosts.map(
       i => {
@@ -125,7 +129,7 @@ class App extends React.Component {
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
             <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} onReviewRental={this.onReviewRental} />} />
-            <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} />} />
+            <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} hasReviewedRental={this.hasReviewedRental} />} />
             <Route path="/rentalreviewprompt" component={RentalReviewPrompt} />
             <Route path="/search" render={() => <Search searchData={this.state.searchData} onClickedRental={this.onClickedRental} />} />
             <Route path="/register" component={Register} />

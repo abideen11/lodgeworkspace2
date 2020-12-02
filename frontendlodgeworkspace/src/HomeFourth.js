@@ -11,7 +11,11 @@ export default class HomeFourth extends React.Component {
                     <div className="dv2-hfrt">
                         <div className="hfrt-d2d">
                             <p>
-                                This is a test.
+                                The world has so many places that are rich with history and
+                                culture. Immerse yourself and gain a new understanding
+                                and insight. Although a picture captures it, it is not
+                                as exhilarating as being in person. What are you waiting
+                                for?
                             </p>
                         </div>
                     </div>

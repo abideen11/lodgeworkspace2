@@ -70,12 +70,12 @@ export default class Register extends React.Component {
                             </label>
                             <br />
                             <br />
-                            <label className="rgs-2lb">Password:
+                            <label className="rgs-2lb2">Password:
                             {" "}<input className="rgs-2ip2" onChange={this.handleChange} name="password" placeholder="" type="password"></input>
                             </label>
                             <br />
                             <br />
-                            <label className="rgs-2lb">Confirm Password:
+                            <label className="rgs-2lb3">Confirm Password:
                             {" "}<input className="rgs-2ip3" onChange={this.handleChange} name="confirmPassword" placeholder="" type="password"></input>
                             </label>
                             <br />

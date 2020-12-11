@@ -109,7 +109,7 @@ class App extends React.Component {
       this.setState({hostsData: this.state.hosts})
     }
     else {
-      if(e === "FL" || e === "MI" || e === "NC" || e === "TN") {
+      if(e === "CA" || e === "FL" || e === "MI" || e === "NC" || e === "TN") {
         this.setState({hostsData: this.state.hosts.filter(i => i.location[i.location.length-2] === e[0] && i.location[i.location.length-1] === e[1])})
       }
     }

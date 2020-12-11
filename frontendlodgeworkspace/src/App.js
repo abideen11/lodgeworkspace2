@@ -24,6 +24,7 @@ import Temporary from './Temporary';
 import Search from './Search';
 import RentalFavorites from './RentalFavorites';
 import Register from './Register';
+import Rentalsalinas from './Rentalsalinas';
 
 // function App() {
 //   return (
@@ -114,6 +115,7 @@ class App extends React.Component {
     }
   }
   render() {
+    console.log(this.state.hosts)
     return(
       <BrowserRouter>
         <div>
@@ -127,6 +129,8 @@ class App extends React.Component {
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
+            {/* <Route path="/salinas" render={() => <Rentalsalinas />} /> */}
+            <Route path="/salinas" render={() => <Rentalsalinas clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
             <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} onReviewRental={this.onReviewRental} />} />
             <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} hasReviewedRental={this.hasReviewedRental} />} />

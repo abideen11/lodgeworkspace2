@@ -23,6 +23,7 @@ export default class RentalContainer extends React.Component {
                                 <h3 className="rcd2-d1h31">State:</h3>
                                 <select className="rcd2-d1s1" value={this.props.value} onChange={e => this.props.onFilterHosts(e.target.value)}>
                                     <option value="Please choose a state">Please choose a state</option>
+                                    <option value="CA">CA</option>
                                     <option value="FL">FL</option>
                                     <option value="MI">MI</option>
                                     <option value="NC">NC</option>

@@ -25,7 +25,10 @@ export default class SearchResult extends React.Component {
                         this.props.host.location === "Crawford, TN" ?
                         <div className="srs-dv1" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/crawford" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                         :
+                        this.props.host.location === "Green Cove Springs, FL" ?
                         <div className="srs-dv1" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/greencovesprings" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
+                        :
+                        <div className="srs-dv1" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/salinas" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                     }
                 </div>
                 <br />
@@ -48,6 +51,9 @@ export default class SearchResult extends React.Component {
                         <div className="srs-dv1"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Log In</Link></div>
                         :
                         this.props.host.location === "Crawford, TN" ?
+                        <div className="srs-dv1"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Log In</Link></div>
+                        :
+                        this.props.host.location === "Green Cove Springs, FL" ?
                         <div className="srs-dv1"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Log In</Link></div>
                         :
                         <div className="srs-dv1"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Log In</Link></div>

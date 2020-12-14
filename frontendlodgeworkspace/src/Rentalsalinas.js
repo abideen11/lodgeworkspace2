@@ -102,7 +102,10 @@ export default class Rentalsalinas extends React.Component {
                     </div>
                     <div className="rdv2-div3">
                         <p>
-                            Located in The Golden State. Salinas has some great places to explore.
+                            Located in The Golden State. Salinas offers places and experiences 
+                            worth trying. Due to its location being close to Silicon Valley. 
+                            You can go see the headquarters of your favorite tech companies 
+                            like Facebook, Twitter, Google and more.
                         </p>
                     </div>
                     <div className="rdv2-div4">
@@ -111,8 +114,8 @@ export default class Rentalsalinas extends React.Component {
                     <div className="rdv2-div5">
                         <p className="rdv2-div5p1"><FontAwesomeIcon icon={faMapMarkerAlt} /> {this.props.clickedRental.location}</p>
                         <p className="rdv2-div5p2"><FontAwesomeIcon icon={faHome} /> {this.props.clickedRental.rental}</p>
-                        <p className="rdv2-div5p3"><FontAwesomeIcon icon={faDollarSign} /> ${this.props.clickedRental.price}</p>
-                        <p className="rdv2-div5p4"><FontAwesomeIcon icon={faClock} /> {this.props.clickedRental.max_days}</p>
+                        <p className="rdv2-div5p3"><FontAwesomeIcon icon={faDollarSign} /> ${this.props.clickedRental.price}/Day</p>
+                        <p className="rdv2-div5p4"><FontAwesomeIcon icon={faClock} /> {this.props.clickedRental.max_days} Days</p>
                         <p className="rdv2-div5p5"><FontAwesomeIcon icon={faUser} /> {this.props.clickedRental.name}</p>
                     </div>
                     <div className="rdv2-div6">

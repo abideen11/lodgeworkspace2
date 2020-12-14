@@ -15,7 +15,6 @@ export default class Header extends React.Component {
                 <div className="hdr-col2">
                     <div title="Flathopper" className="hdr-div">
                         <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}><img src={flathopperlogo} alt="plc" /></Link>
-                        {/* <img src={flathopperlogo} alt="plc" /> */}
                     </div>
                     <div title="Book Rental" className="hdr-div3">
                         <span className="hd3-sp"><Link to="/rentals" style={{ color: 'inherit', textDecoration: 'none' }}>Book Rental</Link></span>

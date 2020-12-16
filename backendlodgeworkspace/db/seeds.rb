@@ -15,6 +15,8 @@ h3 = Host.create(name: "Merle Munson", age: 38, location: "Mount Pleasant, MI", 
 h4 = Host.create(name: "Teri R. Morris", age: 51, location: "Crawford, TN", rental: "2 Bedroom Condo", max_days: 6, price: 82, rental_img1: "https://images1.apartments.com/i2/remVizPVYlvkHCg_oHcUxVkS9_1yaf4FF4pa5rrkJPk/117/the-murphy-irvine-irvine-ca-building-photo.jpg", rental_img2: "https://assets.roomstogo.com/king-bedroom-sets_room-grid.jpg?cache-id=1137961473616752a3ad2fa809712c38w=1664&q=100", fave: false)
 h5 = Host.create(name: "David Emerson", age: 36, location: "Green Cove Springs, FL", rental: "4 Bedroom House", max_days: 5, price: 52, rental_img1: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFmEHkrxp12FIPflGb4zWDXUlR7eJyEPYYYQ&usqp=CAU", rental_img2: "https://www.murnis.com/murnis_wp/wp-content/uploads/2018/05/Murnis-Houses-The-Big-House-2nd-Floor-Coconut-Bedroom-2-1024.jpg", fave: false)
 h6 = Host.create(name: "Alan T. Trombley", age: 32, location: "Salinas, CA", rental: "4 Bedroom House", max_days: 5, price: 74, rental_img1: "https://ap.rdcpix.com/f7354b5e2f64b44ea85c831e52f45ef7l-m1872324939xd-w1020_h770_q80.jpg", rental_img2: "https://images.trvl-media.com/hotels/1000000/1000000/996300/996229/4f2f8e68.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium", fave: false)
+h7 = Host.create(name: "Henry Schmitt", age: 42, location: "Fort Worth, TX", rental: "3 Bedroom House", max_days: 4, price: 78, rental_img1: "https://trinitycustomhomes.com/wp-content/uploads/2016/09/Elev-1.jpg", rental_img2: "https://i.pinimg.com/originals/42/0e/6b/420e6bcfb1ec811d67e449ce3e63a380.jpg", fave: false)
+
 
 
 

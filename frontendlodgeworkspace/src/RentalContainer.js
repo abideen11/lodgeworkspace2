@@ -28,6 +28,7 @@ export default class RentalContainer extends React.Component {
                                     <option value="MI">MI</option>
                                     <option value="NC">NC</option>
                                     <option value="TN">TN</option>
+                                    <option value="TX">TX</option>
                                 </select>
                             </div>
                             <div className="rcd2-div2">

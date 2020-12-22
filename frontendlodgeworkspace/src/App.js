@@ -25,6 +25,7 @@ import Search from './Search';
 import RentalFavorites from './RentalFavorites';
 import Register from './Register';
 import Rentalsalinas from './Rentalsalinas';
+import Rentalfortworth from './Rentalfortworth';
 
 // function App() {
 //   return (
@@ -109,7 +110,7 @@ class App extends React.Component {
       this.setState({hostsData: this.state.hosts})
     }
     else {
-      if(e === "CA" || e === "FL" || e === "MI" || e === "NC" || e === "TN") {
+      if(e === "CA" || e === "FL" || e === "MI" || e === "NC" || e === "TN" || e === "TX") {
         this.setState({hostsData: this.state.hosts.filter(i => i.location[i.location.length-2] === e[0] && i.location[i.location.length-1] === e[1])})
       }
     }
@@ -129,8 +130,8 @@ class App extends React.Component {
             <Route path="/mountpleasant" render={() => <Rentalmountpleasant clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/crawford" render={() => <Rentalcrawford clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/greencovesprings" render={() => <Rentalgreencove clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
-            {/* <Route path="/salinas" render={() => <Rentalsalinas />} /> */}
             <Route path="/salinas" render={() => <Rentalsalinas clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
+            <Route path="/fortworth" render={() => <Rentalfortworth clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />
             <Route path="/rentalreceipt" render={() => <RentalReceipt reservedRental={this.state.reservedRental} />} />
             <Route path="/writereview" render={() => <RentalReview allRentals={this.state.allRentals} onReviewRental={this.onReviewRental} />} />
             <Route path="/rentalreview" render={() => <RentalReviewForm reviewRental={this.state.reviewRental} hasReviewedRental={this.hasReviewedRental} />} />

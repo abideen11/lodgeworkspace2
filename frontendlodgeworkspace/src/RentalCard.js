@@ -47,7 +47,10 @@ export default class RentalCard extends React.Component {
                             this.props.host.location === "Green Cove Springs, FL" ?
                             <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/greencovesprings" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                             :
+                            this.props.host.location === "Salinas, CA" ?
                             <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/salinas" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
+                            :
+                            <div className="rcd-sdv5" onClick={() => this.props.onClickedRental(this.props.host)}><Link to="/fortworth" style={{ color: 'inherit', textDecoration: 'none' }}>Select</Link></div>
                         }
                         {/* {
                             this.state.fave === false ?

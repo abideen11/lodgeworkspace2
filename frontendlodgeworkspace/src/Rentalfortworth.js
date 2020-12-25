@@ -5,6 +5,7 @@ import React from 'react';
 import DatePicker from 'react-datepicker'
 
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from 'react-router-dom';
 
 export default class Rentalfortworth extends React.Component {
     state = {
@@ -12,7 +13,7 @@ export default class Rentalfortworth extends React.Component {
         currentDate: new Date(),
         beginDate: new Date(),
         endDate: new Date(),
-        lodging_Fee: 0,
+        lodgingFee: 0,
         lodgingFee_fixed: 0,
         serviceFee_fixed: 0,
         total_fixed: 0,
@@ -35,16 +36,16 @@ export default class Rentalfortworth extends React.Component {
             receiptNumber: null
         }
     }
-    showRentalImg1 = () => {this.setState({rental_Img1: true})}
-    notShowRentalImg1 = () => {this.setState({rental_Img1: false})}
+    showRentalImg1 = () => {this.setState({rentalImg1: true})}
+    notShowRentalImg1 = () => {this.setState({rentalImg1: false})}
     onBeginDate = (date) => {this.setState({beginDate: date})}
     onEndDate = (date) => {this.setState({endDate: date})}
     onFees = () => {
         this.setState({
-            lodging_Fee: ((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price,
+            lodgingFee: ((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price,
             lodgingFee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price).toFixed(2),
             serviceFee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15).toFixed(2),
-            total_fixed: ((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)+(((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)).toFixed(2)
+            total_fixed: ((((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price)+(((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15)).toFixed(2)
         })
     }
     onBookedRental = () => {
@@ -52,7 +53,7 @@ export default class Rentalfortworth extends React.Component {
             bookedRental: {
                 ...i.bookedRental,
                 begin_Date: this.state.beginDate,
-                endDate: this.state.endDate,
+                end_Date: this.state.endDate,
                 days: (this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24),
                 lodging_Fee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price).toFixed(2),
                 service_Fee_fixed: (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24))*this.props.clickedRental.price*0.15).toFixed(2),
@@ -143,7 +144,7 @@ export default class Rentalfortworth extends React.Component {
                         <p className="rdv2-div8p6">${this.state.total_fixed}</p>
                         {
                             this.state.lodgingFee > 0 && (((this.state.endDate.getTime() - this.state.beginDate.getTime())/(1000*3600*24)) <= this.props.clickedRental.max_days) && this.state.endDate.getTime() > this.state.beginDate.getTime() ?
-                            <div className="rdv2-div8s1" onClick={() => {this.props.onReservedRental(this.state.bookedRental); this.addRental()}}>Accept</div>
+                            <div className="rdv2-div8s1" onClick={() => {this.props.onReservedRental(this.state.bookedRental); this.addRental()}}><Link to="/rentalreceipt" style={{ color: 'inherit', textDecoration: 'none' }}>Accept</Link></div>
                             :
                             <div className="rdv2-div8s1alt" disabled>Accept</div>
                         }

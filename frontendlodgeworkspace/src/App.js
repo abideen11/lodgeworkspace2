@@ -26,6 +26,8 @@ import RentalFavorites from './RentalFavorites';
 import Register from './Register';
 import Rentalsalinas from './Rentalsalinas';
 import Rentalfortworth from './Rentalfortworth';
+import About from './About';
+import FAQ from './FAQ';
 
 // function App() {
 //   return (
@@ -123,6 +125,8 @@ class App extends React.Component {
           <Route render={() => <Header onSearch={this.onSearch}favorites={this.state.favorites} onFavorite={this.onFavorite} />} />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/faq" component={FAQ} />
             <Route path="/favorites" render={() => <RentalFavorites favorites={this.state.favorites} />} />
             <Route path="/rentals" render={() => <RentalContainer hostsData={this.state.hostsData} onClickedRental={this.onClickedRental} onFilterHosts={this.onFilterHosts} />} />
             <Route path="/rockymount" render={() => <Rentalrockymount clickedRental={this.state.clickedRental} onReservedRental={this.onReservedRental} allRentals={this.state.allRentals} />} />

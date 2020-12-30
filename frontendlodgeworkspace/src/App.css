@@ -271,6 +271,12 @@ ul.hd2-ul {
   float: center;
   margin-top: 120px;
 }
+.ft2-dv9 {
+  float: left;
+}
+.ft2-dv10 {
+  float: right;
+}
 /* -- --  */
 
 /* -- Rental Container -- */
@@ -1041,3 +1047,13 @@ ul.hd2-ul {
   /* top: -10px; */
 }
 /* -- -- */
+
+/* -- About --   */
+.div-abt, .div-faq {
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.abt-div2, .faq-div2 {
+  text-align: center;
+}
+/* -- --  */

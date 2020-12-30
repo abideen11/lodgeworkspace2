@@ -18,15 +18,15 @@ export default class Footer extends React.Component {
                     <div className="ft2-dv">
                         <h4>Company</h4>
                         <ul className="ft2-ul">
-                            <li>About</li>
-                            <li>Careers</li>
+                            <li><Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }}>About</Link></li>
+                            <li> <Link to="/temporary" style={{ color: 'inherit', textDecoration: 'none' }}> Careers</Link></li>
                         </ul>
                     </div>
                     <div className="ft2-dv2">
                         <h4>Support</h4>
                         <ul className="ft2-ul2">
-                            <li>Customer Service</li>
-                            <li>FAQ</li>
+                            <li><Link to="/temporary" style={{ color: 'inherit', textDecoration: 'none' }}>Customer Service</Link></li>
+                            <li><Link to="/faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</Link></li>
                         </ul>
                     </div>
                     <div title="Facebook" className="ft2-dv3">
@@ -50,6 +50,9 @@ export default class Footer extends React.Component {
                     </div>
                     <div className="ft2-dv9">
                         <p><FontAwesomeIcon icon={faCopyright} /> 2020 Flathopper. All rights reserved.</p>
+                    </div>
+                    <div className="ft2-dv10">
+                        <p>Privacy Policy  Terms & Conditions  Ad Choices</p>
                     </div>
                 </div>
                 <div className="ftr-div3"></div>

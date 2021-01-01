@@ -19,13 +19,13 @@ export default class Footer extends React.Component {
                         <h4>Company</h4>
                         <ul className="ft2-ul">
                             <li><Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }}>About</Link></li>
-                            <li> <Link to="/temporary" style={{ color: 'inherit', textDecoration: 'none' }}> Careers</Link></li>
+                            <li><Link to="/careers" style={{ color: 'inherit', textDecoration: 'none' }}> Careers</Link></li>
                         </ul>
                     </div>
                     <div className="ft2-dv2">
                         <h4>Support</h4>
                         <ul className="ft2-ul2">
-                            <li><Link to="/temporary" style={{ color: 'inherit', textDecoration: 'none' }}>Customer Service</Link></li>
+                            <li><Link to="/customerservice" style={{ color: 'inherit', textDecoration: 'none' }}>Customer Service</Link></li>
                             <li><Link to="/faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</Link></li>
                         </ul>
                     </div>

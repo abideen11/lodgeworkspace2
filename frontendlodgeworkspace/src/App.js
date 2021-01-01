@@ -28,6 +28,8 @@ import Rentalsalinas from './Rentalsalinas';
 import Rentalfortworth from './Rentalfortworth';
 import About from './About';
 import FAQ from './FAQ';
+import CareersPage from './CareersPage';
+import CustomerServicePage from './CustomerServicePage';
 
 // function App() {
 //   return (
@@ -126,6 +128,8 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/careers" component={CareersPage} />
+            <Route path="/customerservice" component={CustomerServicePage} />
             <Route path="/faq" component={FAQ} />
             <Route path="/favorites" render={() => <RentalFavorites favorites={this.state.favorites} />} />
             <Route path="/rentals" render={() => <RentalContainer hostsData={this.state.hostsData} onClickedRental={this.onClickedRental} onFilterHosts={this.onFilterHosts} />} />

@@ -1048,12 +1048,39 @@ ul.hd2-ul {
 }
 /* -- -- */
 
-/* -- About --   */
-.div-abt, .div-faq {
+/* -- About, FAQ, CareersPage, CustomerServicePage --   */
+.div-abt, .div-faq, .div-crr, .div-csrv {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.abt-div2, .faq-div2 {
+.abt-div2, .faq-div2, .crr-div2 {
   text-align: center;
+}
+/* -- --  */
+/* -- CustomerServicePage --  */
+.csrv-div2 {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* height: 330px; */
+  position: relative;
+  height: 600px;
+}
+.csrv-dv {
+  /* flex: 30%; */
+  /* float: left; */
+  position: absolute;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: navy;
+}
+.csrv-dv2 {
+  /* float: right; */
+  position: absolute;
+  right: 0;
+  width: 700px;
+  height: 400px;
+  background-color: orange;
+  /* flex: 70%; */
 }
 /* -- --  */

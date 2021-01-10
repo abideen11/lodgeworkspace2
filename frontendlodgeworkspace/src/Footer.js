@@ -13,7 +13,6 @@ export default class Footer extends React.Component {
                 <div className="ftr-div2">
                     <br/>
                     <img src={flathopperlogo} alt="plc" />
-                    {/* <span title="Flathopper">Insert Here</span> */}
                     <br/>
                     <div className="ft2-dv">
                         <h4>Company</h4>
@@ -49,11 +48,16 @@ export default class Footer extends React.Component {
                         <hr/>
                     </div>
                     <div className="ft2-dv9">
-                        <p><FontAwesomeIcon icon={faCopyright} /> 2020 Flathopper. All rights reserved.</p>
+                        <p><FontAwesomeIcon icon={faCopyright} /> 2021 Flathopper. All rights reserved.</p>
                     </div>
                     <div className="ft2-dv10">
-                        <p>Privacy Policy  Terms & Conditions  Ad Choices</p>
+                        <p className="ft2d10-p1"><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/temporary">Privacy Policy</Link> Terms & Conditions Ad Choices</p>
+                        {/* <p>Testing1</p> */}
+                        {/* <p>Testing2</p> */}
                     </div>
+                    {/* <span className="ft2-sp1">exp1</span> */}
+                    {/* <div className="ft2-ed11">exp1</div> */}
+                    {/* <div className="ft2-ed12">exp2</div> */}
                 </div>
                 <div className="ftr-div3"></div>
             </div>

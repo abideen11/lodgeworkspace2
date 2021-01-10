@@ -126,7 +126,6 @@ ul.hd2-ul {
 .hf2-dv2 {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  /* width: auto; */
 }
 .hf2d-dv {
   background-image: url('https://media.bizj.us/view/img/7865962/universal-1*1200xx6000-3381-0-366.jpg');
@@ -244,7 +243,7 @@ ul.hd2-ul {
 .ft2-dv3 {
   float: left;
   margin-top: 30px;
-  margin-left: 670px;
+  margin-left: 630px;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -703,7 +702,6 @@ ul.hd2-ul {
   background-color: violet;
 } */
 .rvf-div {
-  /* text-align: center; */
   display: block;
   margin: 0 auto;
   width: 400px;
@@ -729,8 +727,6 @@ ul.hd2-ul {
   padding: 10px;
 }
 .rvf-div2 {
-  /* display: block; */
-  /* margin: 0 auto; */
   margin-left: 440px;
 }
 .rvf-txt {
@@ -753,9 +749,6 @@ ul.hd2-ul {
   align-items: center;
   float: right;
   margin: 20px
-  /* margin-right: 50px; */
-  /* text-align: right; */
-  /* padding-right: 50px; */
 }
 .rvf-div3alt {
   background-color: grey;
@@ -802,16 +795,11 @@ ul.hd2-ul {
 .srch-div2 {
   text-align: center;
 }
-/* .div-srs {
-  margin: 0 auto;
-} */
 .srs-div {
   margin: 0 auto;
   position: relative;
   width: 550px;
   height: 190px;
-  /* border: 1px solid black; */
-  /* text-align: center; */
 }
 .srs-div img {
   width: 150px;
@@ -819,12 +807,8 @@ ul.hd2-ul {
   position: absolute;
   top: 20px;
   left: 0;
-  /* float: left; */
-  /* margin-top: 30px; */
 }
 .srs-p1 {
-  /* float: right; */
-  /* margin-top: 15px; */
   position: absolute;
   top: 20px;
   right: 0;
@@ -833,19 +817,11 @@ ul.hd2-ul {
   position: absolute;
   top: 50px;
   right: 0;
-  /* float: right; */
-  /* margin-right: -40px; */
-  /* margin-left: 230px; */
-  /* margin-top: 40px; */
-  /* text-align: right; */
 }
 .srs-p3 {
   position: absolute;
   top: 80px;
   right: 0;
-  /* float: right; */
-  /* margin-right: 0; */
-  /* margin-top: 65px; */
 }
 .srs-dv1 {
   position: absolute;
@@ -890,18 +866,15 @@ ul.hd2-ul {
   height: 800px;
 }
 .rgs-d1 {
-  /* text-align: center; */
   margin: 0 auto;
   /* background-color: lightblue; */
   width: 220px;
   height: 150px;
 }
 .rgs-d1 p {
-  /* font-size: 60px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: purple; */
   /* background-color: purple; */
 }
 .rgs-d2 {
@@ -930,13 +903,8 @@ ul.hd2-ul {
   border-radius: 5px;
   margin-left: 280px;
   background-color: blue;
-  /* margin: 0 auto; */
-  /* float: inherit; */
 }
 .rgs-2lb {
-  /* text-align: center; */
-  /* float: left; */
-  /* margin-left: 30px; */
   position: absolute;
   left: 30px;
   top: 60px;
@@ -944,16 +912,12 @@ ul.hd2-ul {
 }
 .rgs-2ip {
   position: absolute;
-  /* float: left; */
-  /* margin-left: 30px; */
-  /* margin-top: 50px; */
   left: 0;
   top: 40px;
   font-size: 24px;
 }
 .rgs-2lb2 {
   position: absolute;
-  /* left: 30px; */
   left: 30px;
   top: 140px;
   font-size: 24px;
@@ -962,9 +926,6 @@ ul.hd2-ul {
   position: absolute;
   left: 0;
   top: 40px;
-  /* left: 0; */
-  /* font-size: 20px; */
-  /* margin-left: 160px; */
   font-size: 24px;
 }
 .rgs-2lb3 {
@@ -978,8 +939,6 @@ ul.hd2-ul {
   left: -80px;
   top: 40px;
   font-size: 24px;
-  /* width: 60px; */
-  /* height: 30px; */
   margin-left: 82px;
 }
 /* .rgs-2ip4 {
@@ -989,7 +948,6 @@ ul.hd2-ul {
   position: absolute;
   left: 220px;
   top: 360px;
-  /* text-align: center; */
 }
 .rgs-2ip4 {
   position: absolute;
@@ -1001,7 +959,6 @@ ul.hd2-ul {
   border-style: solid;
   border-width: thin;
   border-radius: 5px;
-  /* margin-left: 440px; */
   background-color: blue;
   color: white;
 }
@@ -1036,15 +993,9 @@ ul.hd2-ul {
   height: 460px;
 }
 .err-dv {
-  /* z-index: -1; */
-  /* position: absolute; */
-  /* background-color: red; */
   width: 500px;
   height: 300px;
-  /* top: 0; */
-  /* left: 400px; */
   margin: 0 auto;
-  /* top: -10px; */
 }
 /* -- -- */
 
@@ -1053,21 +1004,31 @@ ul.hd2-ul {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
-.abt-div2, .faq-div2, .crr-div2 {
+.abt-div2 {
+  text-align: center;
+}
+.crr-div2 {
+  padding: 20px;
+  width: 100%;
+  height: 330px;
+  text-align: center;
+}
+.faq-div2 {
+  padding: 20px;
+  width: 100%;
+  height: 430px;
   text-align: center;
 }
 /* -- --  */
 /* -- CustomerServicePage --  */
 .csrv-div2 {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* height: 330px; */
   position: relative;
   height: 600px;
 }
+.csrv-div2 h1 {
+  text-align: center;
+}
 .csrv-dv {
-  /* flex: 30%; */
-  /* float: left; */
   position: absolute;
   left: 0;
   width: 400px;
@@ -1075,12 +1036,10 @@ ul.hd2-ul {
   background-color: navy;
 }
 .csrv-dv2 {
-  /* float: right; */
   position: absolute;
   right: 0;
   width: 700px;
   height: 400px;
   background-color: orange;
-  /* flex: 70%; */
 }
 /* -- --  */

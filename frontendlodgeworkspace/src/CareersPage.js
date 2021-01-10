@@ -7,8 +7,6 @@ export default class CareersPage extends React.Component {
                 <div className="crr-div"></div>
                 <div className="crr-div2">
                     <h1>Explore Careers at Flathopper</h1>
-                    {/* <br/> */}
-                    {/* <br/> */}
                     <br/>
                     <p>
                         Unfortunately, we're not accepting applications

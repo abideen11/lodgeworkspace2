@@ -30,6 +30,7 @@ import About from './About';
 import FAQ from './FAQ';
 import CareersPage from './CareersPage';
 import CustomerServicePage from './CustomerServicePage';
+import PrivacyPolicy from './PrivacyPolicy';
 
 // function App() {
 //   return (
@@ -147,6 +148,7 @@ class App extends React.Component {
             <Route path="/search" render={() => <Search searchData={this.state.searchData} onClickedRental={this.onClickedRental} />} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={LogIn} />
+            <Route path="/privacypolicy" component={PrivacyPolicy} />
             <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />
           </Switch>

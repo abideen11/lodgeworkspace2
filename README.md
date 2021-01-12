@@ -9,6 +9,7 @@
 
 Website to book short-term and affordable lodging.
 
+![](flathoppershortgif.gif)
 
 # Installation
 ## For Backend

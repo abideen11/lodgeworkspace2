@@ -51,13 +51,8 @@ export default class Footer extends React.Component {
                         <p><FontAwesomeIcon icon={faCopyright} /> 2021 Flathopper. All rights reserved.</p>
                     </div>
                     <div className="ft2-dv10">
-                        <p className="ft2d10-p1"><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/privacypolicy">Privacy Policy</Link> <Link to="/temporary" style={{ color: 'inherit', textDecoration: 'none' }}>Terms & Conditions</Link> <Link to="/temporary" style={{ color: 'inherit', textDecoration: 'none' }}>Ad Choices</Link></p>
-                        {/* <p>Testing1</p> */}
-                        {/* <p>Testing2</p> */}
+                        <p className="ft2d10-p1"><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/privacypolicy">Privacy Policy</Link> <Link to="/termsandconditions" style={{ color: 'inherit', textDecoration: 'none' }}>Terms & Conditions</Link></p>
                     </div>
-                    {/* <span className="ft2-sp1">exp1</span> */}
-                    {/* <div className="ft2-ed11">exp1</div> */}
-                    {/* <div className="ft2-ed12">exp2</div> */}
                 </div>
                 <div className="ftr-div3"></div>
             </div>

@@ -31,6 +31,7 @@ import FAQ from './FAQ';
 import CareersPage from './CareersPage';
 import CustomerServicePage from './CustomerServicePage';
 import PrivacyPolicy from './PrivacyPolicy';
+import TermsConditions from './TermsConditions';
 
 // function App() {
 //   return (
@@ -149,6 +150,7 @@ class App extends React.Component {
             <Route path="/register" component={Register} />
             <Route path="/login" component={LogIn} />
             <Route path="/privacypolicy" component={PrivacyPolicy} />
+            <Route path="/termsandconditions" component={TermsConditions} />
             <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />
           </Switch>

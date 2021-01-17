@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 
 export default function CustomerServicePage() {
     const [supportOptions, setSupportOptions] = useState([{id: 1, topic: "Check FAQ page", detail: "Please check the FAQ page to see if your questions can be answered there."},{id: 2, topic: "Phone Number", detail: "888-888-8888"},{id: 3, topic: "Email", detail: "flathoppersupport@genericwebsite.com"}])
-    const [supportOptions2, setSupportOptions2] = useState([{id: 1, topic: "Check FAQ page", detail: "Please check the FAQ page to see if your questions can be answered there."},{id: 2, topic: "Phone Number", detail: "888-888-8888"},{id: 3, topic: "Email", detail: "flathoppersupport@genericwebsite.com"}])
+    const [supportOptions2, setSupportOptions2] = useState(supportOptions)
     const showDetail = at => {
-        setSupportOptions2([{id: 1, topic: "Check FAQ page", detail: "Please check the FAQ page to see if your questions can be answered there."},{id: 2, topic: "Phone Number", detail: "888-888-8888"},{id: 3, topic: "Email", detail: "flathoppersupport@genericwebsite.com"}])
-        const allOptions = [...supportOptions]
-        setSupportOptions2(allOptions[at])
+        setSupportOptions2(supportOptions)
+        setSupportOptions2(supportOptions[at])
     }
-    // render() {
         return(
             <div className="div-csrv">
                 <div className="csrv-div"></div>
@@ -23,14 +21,13 @@ export default function CustomerServicePage() {
                     <div className="csrv-dv2">
                         {
                             supportOptions2.length > 1 ?
-                            <p>{supportOptions[0].detail}</p>
+                            <p><b>{supportOptions[0].detail}</b></p>
                             :
-                            <p>{supportOptions2.detail}</p>
+                            <p><b>{supportOptions2.detail}</b></p>
                         }
                     </div>
                 </div>
                 <div className="csrv-div3"></div>
             </div>
         )
-    // }
 }

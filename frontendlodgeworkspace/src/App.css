@@ -999,8 +999,8 @@ ul.hd2-ul {
 }
 /* -- -- */
 
-/* -- About, FAQ, CareersPage, CustomerServicePage, PrivacyPolicy --   */
-.div-abt, .div-faq, .div-crr, .div-csrv, .div-prvpol {
+/* -- About, FAQ, CareersPage, CustomerServicePage, PrivacyPolicy, TermsConditions --   */
+.div-abt, .div-faq, .div-crr, .div-csrv, .div-prvpol, .div-trms {
   display: grid;
   grid-template-columns: 1fr 15fr 1fr;
 }
@@ -1043,8 +1043,8 @@ ul.hd2-ul {
   background-color: orange;
 }
 /* -- --  */
-/* -- Privacy Policy --  */
-.prvpol-div2 {
+/* -- Privacy Policy, Terms and Conditions --  */
+.prvpol-div2, .trms-div2 {
   padding: 20px;
   /* text-align: center; */
 }

@@ -38,7 +38,6 @@ export default class Register extends React.Component {
         })
     }
     render() {
-        console.log(this.state.username)
         return(
             this.state.hasRegistered ? 
             <div className="div-rgs">
@@ -49,7 +48,6 @@ export default class Register extends React.Component {
                         <br />
                         <h2>Log In</h2>
                         <br />
-                        {/* <span>Log In</span> */}
                         <div><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Log In</Link></div>
                     </div>
                 </div>

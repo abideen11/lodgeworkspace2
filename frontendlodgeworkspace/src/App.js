@@ -10,7 +10,6 @@ import Rentals from './RentalContainer';
 import RentalContainer from './RentalContainer';
 import Error from './Error';
 import LogIn from './LogIn';
-import RentalForm from './RentalForm';
 import Rentalrockymount from './Rentalrockymount';
 import Rentalocala from './Rentalocala';
 import Rentalmountpleasant from './Rentalmountpleasant';

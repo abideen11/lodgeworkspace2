@@ -26,7 +26,7 @@ export default class RentalReviewForm extends React.Component {
                         to bring it to our attention.
                     </p>
                     <h1 className="rvf-h2">Review of the {this.props.reviewRental.rental} in {this.props.reviewRental.location}</h1>
-                    <p className="rvf-p2"><b>Please give us a rating (5 stars meaning you was very satisfied with the platform):</b></p>
+                    <p className="rvf-p2"><b>Please give us a rating (5 stars meaning you were very satisfied with the platform):</b></p>
                     <div className="rvf-div2">
                         <StarRatings
                             rating={this.state.rating}

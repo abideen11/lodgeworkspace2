@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import flathopperlogo from './flathopperdigimg.png'
 import flathopperimg from './flathopperdigimg2.png'
 
 export default class LogIn extends React.Component {

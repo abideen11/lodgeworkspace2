@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 
-// import flathopperlogo from './flathopperlogo.png'
-// import flathopperlogo from './flathopperpic.png'
 import flathopperlogo from './flathopperdigimg.png'
 
 export default class Header extends React.Component {

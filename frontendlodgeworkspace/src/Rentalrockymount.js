@@ -38,17 +38,7 @@ export default class Rentalrockymount extends React.Component {
     }
     showRentalImg1 = () => {this.setState({rentalImg1: true})}
     notShowRentalImg1 = () => {this.setState({rentalImg1: false})}
-    onBeginDate = (date) => {
-        this.setState({
-            beginDate: date
-        })
-    }
-    // currentAndBeginTime = () => {
-    //     this.setState({
-    //         currentTime: this.state.currentDate.getTime(),
-    //         beginTime: this.state.beginDate.getTime()
-    //     })
-    // }
+    onBeginDate = (date) => {this.setState({beginDate: date})}
     onEndDate = (date) => {this.setState({endDate: date})}
     onFees = () => (
         this.setState({

@@ -164,6 +164,7 @@ ul.hd2-ul {
   top: 710px;
   right: 200px;
 }
+/* -- --  */
 
 /* -- Home Second --  */
 .div-hsc {
@@ -217,7 +218,7 @@ ul.hd2-ul {
 }
 /* -- --  */
 
-/* --footer-- */
+/* -- Footer -- */
 .div-ftr {
   background-color: violet;
   display: grid;
@@ -1032,15 +1033,19 @@ ul.hd2-ul {
   position: absolute;
   left: 0;
   width: 400px;
-  height: 400px;
-  background-color: navy;
+  height: 180px;
+  background-color: violet;
+}
+.csrv-dv p {
+  padding-left: 20px;
+  font-size: 20px;
 }
 .csrv-dv2 {
   position: absolute;
   right: 0;
   width: 700px;
   height: 400px;
-  background-color: orange;
+  /* background-color: orange; */
 }
 /* -- --  */
 /* -- Privacy Policy, Terms and Conditions --  */
